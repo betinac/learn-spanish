@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latin American Spanish</title>
+    <link rel="preload" href="css/styles.css" as="style">
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- Google Fonts: Roboto, GochiHand, and Lexend -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel='preload' as='style'
+        href='https://fonts.googleapis.com/css2?family=Lexend&family=Gochi+Hand&family=Roboto&display=swap'>
+    <link rel="stylesheet"
+        href='https://fonts.googleapis.com/css2?family=Lexend&family=Gochi+Hand&family=Roboto&display=swap'>
+    <script src="https://kit.fontawesome.com/5d44ca8e42.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header class="top-nav">
+        <div class="nav-container">
+            <div class="logo">
+                <a href="#"> <img src="betina-qa-portfolio/assets/logos/betina-logo.svg" alt="Learn Spanish 123's logo"
+                        class="betina-logo"> Learn Spanish 123</a>
+            </div>
+            <button class="hamburger" aria-label="Toggle navigation">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="/learn-spanish/index.html#hero"><strong>Home</strong></a></li>
+                    <li><a href="/learn-spanish/index.html#tutor-section">About</a></li>
+                    <li><a href="/learn-spanish/index.html#pricing-section">Pricing</a></li>
+                    <li><a href="#faq-section">FAQ</a></li>
+                    <li class="contact-menu-item">
+                        <button type="submit" class="cta-button cta-get-in-touch mobile-contact"
+                            onclick="document.getElementById('contactSection').scrollIntoView({ behavior: 'smooth' });">
+                            <i class="fa-solid fa-envelope fa-beat" style="--fa-beat-scale: 1.2;"></i> Get in Touch
+                        </button>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="faq-section" class="faq-section">
+            <div class="nav-spacer"></div>
+            <h2 class="faq-title">FAQs: Everything You Need to Know Before You Start!</h2>
+            <div class="faq-container">
+                <div class="faq-image">
+                    <img src="assets/illustrations/faq.svg" alt="Frequently Asked Questions - Man with a question mark">
+                </div>
+                <div class="faq-content">
+                    <div class="faq-category">
+                        <div class="faq-category-name">
+                            <div class="faq-icon"><i class="fa-solid fa-trophy"></i></div>
+                            <span>Learning & General</span>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-question" onclick="toggleFAQ(this)">📌 Do I need prior Spanish knowledge?
+                                <span>+</span>
+                            </div>
+                            <div class="faq-answer">No! These lessons are designed for all levels, from complete
+                                beginners to those
+                                looking to refine their skills.</div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-question" onclick="toggleFAQ(this)">📌 How long does it take to see
+                                progress? <span>+</span></div>
+                            <div class="faq-answer">It depends on your commitment! Many students notice improvements in
+                                their speaking and
+                                comprehension within a few lessons. Consistency is key!</div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-question" onclick="toggleFAQ(this)">📌 Are lesson materials included?
+                                <span>+</span>
+                            </div>
+                            <div class="faq-answer">Yes! You'll receive tailored resources, exercises, and practice
+                                materials to support your learning journey.</div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-question" onclick="toggleFAQ(this)">📌 Can I take lessons if I have a busy
+                                schedule? <span>+</span></div>
+                            <div class="faq-answer">Absolutely! Our flexible scheduling allows you to choose lesson
+                                times that fit your lifestyle.</div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-question" onclick="toggleFAQ(this)">📌 Do you offer group lessons?
+                                <span>+</span>
+                            </div>
+                            <div class="faq-answer">Currently, we are focusing on individual sessions to provide
+                                personalized attention,
+                                but we may consider introducing small-group options.</div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-question" onclick="toggleFAQ(this)">📌 Am I too old to learn Spanish?
+                                <span>+</span>
+                            </div>
+                            <div class="faq-answer">Not at all! There's no age limit to learning Spanish. In fact,
+                                learning a new language
+                                is a great way to keep your mind sharp. Our classes are designed for adult learners,
+                                ensuring a comfortable
+                                and engaging experience.</div>
+                        </div>
+                    </div>
+
+                    <div class="faq-category">
+                        <div class="faq-category-name">
+                            <div class="faq-icon"><i class="fa-solid fa-calendar-days"></i></div>
+                            <span>Scheduling & Cancellations</span>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-question" onclick="toggleFAQ(this)">📌 Can I reschedule a class if I can't
+                                attend? <span>+</span></div>
+                            <div class="faq-answer">Yes! You may reschedule your lesson if you give at least 24 hours'
+                                notice. Last-minute
+                                cancellations (within 24 hours) will be considered a completed session and cannot be
+                                refunded or rescheduled.
+                                Since tutors reserve time for you, please be mindful when making changes.</div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-question" onclick="toggleFAQ(this)">📌 What happens if my tutor cancels a
+                                class? <span>+</span></div>
+                            <div class="faq-answer">If your tutor needs to cancel a lesson due to an emergency or
+                                scheduling conflict,
+                                you will be offered a rescheduled session at no extra cost.</div>
+                        </div>
+                    </div>
+
+                    <div class="faq-category">
+                        <div class="faq-category-name">
+                            <div class="faq-icon"><i class="fa-solid fa-wifi"></i></div>
+                            <span>Technical Issues & Connectivity</span>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-question" onclick="toggleFAQ(this)">📌 What platform do we use for lessons?
+                                <span>+</span>
+                            </div>
+                            <div class="faq-answer">We use Zoom for a seamless, interactive learning experience.
+                                No need for to download anything or to have complicated setups. Join with a click!</div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-question" onclick="toggleFAQ(this)">📌 Do I need any special software for
+                                the lessons? <span>+</span></div>
+                            <div class="faq-answer">You only need a stable internet connection and a device with a
+                                microphone and speakers
+                                (a headset is recommended for better audio quality). All learning materials will be
+                                provided digitally.</div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-question" onclick="toggleFAQ(this)">📌 What happens if I have an internet
+                                issue during my lesson? <span>+</span></div>
+                            <div class="faq-answer">If your connection drops during class, try reconnecting as soon as
+                                possible. If the issue persists
+                                and you cannot continue, we'll discuss rescheduling the remaining time later.
+                                However, frequent connection issues should be resolved to avoid interruptions.</div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-question" onclick="toggleFAQ(this)">📌 What if my tutor has technical
+                                issues? <span>+</span></div>
+                            <div class="faq-answer">If your tutor experiences a connection problem that disrupts your
+                                lesson,
+                                the lost time will be rescheduled at no extra charge.</div>
+                        </div>
+                    </div>
+
+                    <div class="faq-category">
+                        <div class="faq-category-name">
+                            <div class="faq-icon"><i class="fa-solid fa-lock"></i></div>
+                            <span>Privacy & Recording Policies</span>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-question" onclick="toggleFAQ(this)">📌 Will my personal information be kept
+                                private? <span>+</span></div>
+                            <div class="faq-answer">Absolutely! At Latin American Spanish, we take your privacy
+                                seriously. Your personal details
+                                will never be shared, sold, or rented to third parties. For full details, please refer
+                                to our Privacy Policy.</div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-question" onclick="toggleFAQ(this)">📌 Are the Zoom lessons recorded?
+                                <span>+</span>
+                            </div>
+                            <div class="faq-answer">No. Zoom recordings and screenshots during lessons are strictly
+                                prohibited to ensure privacy
+                                and a comfortable learning environment. Audio recordings may only be made with your
+                                explicit consent for
+                                learning purposes. All materials shared during the lesson will be provided to you, so
+                                there is no need to record
+                                or take screenshots.</div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-question" onclick="toggleFAQ(this)">📌 Can I request a recording of my
+                                lesson? <span>+</span></div>
+                            <div class="faq-answer">At this time, lessons are not automatically recorded. If you'd like
+                                a recording of a
+                                particular session, please discuss it with your tutor beforehand to see if arrangements
+                                can be made.
+                                Only audio recordings can be provided with explicit consent and for learning purposes.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-category">
+                        <div class="faq-category-name">
+                            <div class="faq-icon"><i class="fa-solid fa-credit-card"></i></div>
+                            <span>Payments & Pricing</span>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-question" onclick="toggleFAQ(this)">📌 Do I need to pay for lessons in
+                                advance? <span>+</span></div>
+                            <div class="faq-answer">Yes, all lessons must be prepaid. You will receive a payment
+                                reminder once your balance
+                                drops to four or fewer scheduled hours. Payment must be made at least 24 hours before
+                                your next scheduled class
+                                to continue your sessions without interruption. We also offer a money-back guarantee for
+                                added peace of mind.</div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-question" onclick="toggleFAQ(this)">📌 What payment methods do you accept?
+                                <span>+</span>
+                            </div>
+                            <div class="faq-answer">For Canadian students, we accept e-transfers and wire transfers. For
+                                international students,
+                                wire transfers are available. Please check with your bank regarding any additional
+                                processing fees. We are also
+                                working on adding more payment options, most likely through Stripe services.</div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-question" onclick="toggleFAQ(this)">📌 What is your refund policy?
+                                <span>+</span>
+                            </div>
+                            <div class="faq-answer">For one-on-one lessons, refunds are available if you cancel at least
+                                48 hours
+                                before your scheduled session.</div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-question" onclick="toggleFAQ(this)">📌 Can I get a refund for digital
+                                products (PDFs, audio files, etc.)? <span>+</span></div>
+                            <div class="faq-answer">Since digital products cannot be returned, we do not offer refunds.
+                                However, if
+                                you experience any issues (e.g. a corrupted file), we'll gladly help you replace it.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-footer">
+                    <span class="sup-text">*</span> If you have any other questions about our tutoring sessions and how we can help you learn
+                    Spanish online, please let us know! 📬 latintutor@perezneder.com
+                </div>
+            </div>
+        </section>
+
+
+    </main>
+    <!-- Footer section -->
+    <footer>
+        <p>© 2025 • Betina Perez Neder • All Rights Reserved.</p>
+    </footer>
+
+    <script src="js/faqs-accordion.js"></script>
+</body>
+
+</html>
