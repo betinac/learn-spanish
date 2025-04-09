@@ -3,6 +3,8 @@ function openContactForm () {
     const openModalBtns = document.querySelectorAll(".openModalBtn");
     const closeModalBtn = document.querySelector(".close");
     
+    if (!openModalBtns.length || !modal) return;
+    
     openModalBtns.forEach(function(btn) {
         btn.addEventListener("click", function() {
             modal.classList.remove("modal-hidden");
