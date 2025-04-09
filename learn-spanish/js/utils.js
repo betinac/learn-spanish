@@ -22,7 +22,7 @@ function clickHamburgerMenu() {
 }
 
 function loadHeader() {
-  fetch('/learn-spanish/pages/nav.html')
+  fetch('/learn-spanish/learn-spanish/pages/nav.html')
     .then(res => res.text())
     .then(data => {
       document.getElementById('header-placeholder').innerHTML = data;
@@ -36,7 +36,7 @@ function loadHeader() {
 }
 
 function loadContactModal() {
-  fetch('/learn-spanish/components/contact-modal.html')
+  fetch('/learn-spanish/learn-spanish/components/contact-modal.html')
     .then(res => res.text())
     .then(data => {
       document.getElementById('contact-modal-placeholder').innerHTML = data;
