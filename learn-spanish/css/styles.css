@@ -1,28 +1,29 @@
 :root {
-    --primary-bg: #005F73;
+    --primary-bg: #E2E8F4;
+    --secondary-bg: #f9f4ee;
+    --nav-bg: #FAF9F6;
+    --benefits-bg: #f7e1c1;
+    --pricing-bg: #f8f9fa;
+    --best-value-bg: #ffeeba;
+    --trial-section-bg: #f8d4a8;
     --accent: #EE9B00;
     --secondary-accent: #CA6702;
     --tertiary-accent: #80A4ED;
     --fourth-accent: #3447AA;
     --fifth-accent: #f2E0E6;
-    --body-text: #222222;
-    --bg-image-shadow: #FAF3E0;
+    --text-body: #222222;
     --text-white: #fcf9f1;
+    --text-white-pale: #eae8e8;
     --text-black: #333333;
     --text-gray: #414040;
     --text-light-gray: #888888;
     --text-terms: #007bff;
-    --secondary-bg: #f9f4ee;
-    --benefits-bg: #f7e1c1;
-    --pricing-bg: #f8f9fa;
-    --best-value-bg: #ffeeba;
     --best-value-border: #ffca2c;
     --best-value-border-hover: #e0a800;
-    --trial-section-bg: #f8d4a8;
-
-    --hero-title-font: 'Lexend', Arial, sans-serif;    
+    --hero-title-font: 'Lexend', Arial, sans-serif;
     --hero-subtitle-font: 'Gochi Hand', Arial, sans-serif;
     --body-default-font: 'Roboto', Arial, sans-serif;
+    --sections-title-font: 'Lexend', Arial, sans-serif;
     --font-default-size: 16px;
     --h1-title: #373535;
     --benefits-heading: #373535;
@@ -33,15 +34,12 @@
     --steps-number: #8a3903;
     --cform-error: #9D0000;
     --cform-confirmation: #065906;
-
     --nav-bg: #FAF9F6;
     --nav-text: #13315C;
     --nav-shadow: #9DD7EC1A;
-
     --cta-text: #FFFFFF;
     --cta-bg: #FC815F;
     --cta-gradient-accent: #E9A112;
-
 }
 
 /* ****************************************
@@ -60,11 +58,14 @@ html {
 body {
     font-family: var(--body-default-font);
     font-size: var(--font-default-size);
-    color: var(--body-text);
+    color: var(--text-body);
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+}
+
+strong {
+    font-weight: 700;
 }
 
 /* ****************************************
@@ -153,7 +154,7 @@ body {
 }
 
 .mobile-contact {
-    font-family: var(--body-title-font);
+    font-family: var(--body-default-font);
     font-size: 16px;
 }
 
@@ -172,7 +173,7 @@ body {
     color: var(--cta-text);
     border-radius: 25px;
     border: none;
-    font-size: clamp(1rem, 3vw, 1.2rem);
+    font-size: clamp(1rem, 2vw, 1.2rem);
     transition: background-color 1s ease;
     text-decoration: none;
     cursor: pointer;
@@ -194,6 +195,10 @@ body {
     white-space: nowrap;
     margin: auto;
     margin-top: 3rem;
+}
+
+.nav-links .cta-button {
+    padding: 0.7rem 1.5rem;
 }
 
 /* ****************************************
@@ -231,10 +236,8 @@ body {
 
 .hero-content h1.hero-title {
     font-family: var(--hero-title-font);
-    font-size: 3.5rem;
-    /*font-size: clamp(12rem, 6.6rem + 12vw, 18rem);*/
+    font-size: clamp(1.8rem, 2.1rem + 1.1vw, 6rem);
     font-style: normal;
-    font-weight: normal;
     line-height: 8rem;
     color: var(--text-white);
     margin-bottom: 1rem;
@@ -242,18 +245,16 @@ body {
 
 .hero-content h2.hero-subtitle {
     font-family: var(--hero-subtitle-font);
-    font-size: 5rem;
-    /*font-size: clamp(12rem, 6.6rem + 12vw, 18rem);*/
+    font-size: clamp(1.5rem, 3.3rem + 2vw, 6rem);
     font-style: normal;
-    font-weight: normal;
     line-height: 6rem;
     color: var(--text-white);
     margin-bottom: 1rem;
 }
 
 .hero-content .hero-text {
-    font-size: 1.8rem;
-    color: var(--text-white);
+    font-size: clamp(1rem, 1.1rem + 1.5vw, 2rem);
+    color: var(--text-white-pale);
     margin-bottom: 1rem;
 }
 
@@ -264,6 +265,30 @@ body {
     background-color: #fdf6ec;
     padding: 50px 20px;
     text-align: center;
+}
+
+.tutor-title,
+.trial-title,
+.intro-title,
+.who-title,
+.benefits-title,
+.steps-title,
+.pricing-title,
+.kickstart-title {
+    font-family: var(--sections-title-font);
+    font-weight: 400;
+    font-style: normal;
+}
+
+h2.tutor-title,
+h2.trial-title,
+h2.intro-title,
+h2.who-title,
+h2.benefits-title,
+h2.steps-title,
+h2.pricing-title,
+h2.kickstart-title {
+    font-size: clamp(2.5rem, 3.5vw, 3rem);
 }
 
 .tutor-container {
@@ -309,25 +334,13 @@ body {
     margin-bottom: 20px;
 }
 
-@media (max-width: 768px) {
-    .tutor-container {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .tutor-text {
-        text-align: center;
-    }
-
-    .tutor-image img {
-        width: 240px;
-        height: 240px;
-    }
-}
-
 /* ****************************************
    Trial Upsell Section
    **************************************** */
+h2.trial-title {
+    color: var(--steps-title);
+}
+
 .trial-upsell {
     background: var(--trial-section-bg);
     padding: 2rem;
@@ -341,7 +354,7 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     gap: 20px;
-}  
+}
 
 .trial-image {
     flex: 1;
@@ -362,13 +375,11 @@ body {
 }
 
 .trial-title {
-    font-size: 2.5rem;
-    font-weight: bold;
-    color: #2c3e50;
     margin-bottom: 20px;
 }
 
-.trial-description, .trial-next-step {
+.trial-description,
+.trial-next-step {
     font-size: 1.5rem;
     color: #555;
     margin-bottom: 20px;
@@ -390,21 +401,16 @@ body {
 }
 
 .trial-benefits li::before {
-    content: '✔'; /* A checkmark icon */
+    content: '✔';
     position: absolute;
     left: 0;
     color: #28a745;
     font-size: 1.2rem;
 }
 
-.trial-next-step {
-    font-size: 1.5rem;
-    color: #555;
-    margin: 20px 0;
-}
-
 .trial-wrapper .cta-get-in-touch {
     margin-top: 1rem;
+    margin-bottom: 2rem;
 }
 
 .trial-offer {
@@ -437,20 +443,6 @@ body {
     font-size: 1.6rem;
 }
 
-@media (max-width: 768px) {
-    .trial-wrapper {
-      flex-direction: column;
-      text-align: center;
-    }
-    .trial-image, 
-    .trial-content {
-      max-width: 100%;
-    }
-    .trial-content {
-      text-align: center;
-    }
-}
-
 /* ***************************************
    Intro Section - Ready to Speak Spanish?
    *************************************** */
@@ -479,18 +471,16 @@ body {
 h1.intro-title,
 .faq-title {
     display: flex;
-    font-size: 3rem;
+    font-size: clamp(2.5rem, 3.5vw, 3rem);
     margin-bottom: 0.5rem;
     justify-content: center;
     align-items: center;
     text-align: center;
-    color: var(--h1-title);
+    color: var(--steps-number);
 }
 
 h1.intro-title::before,
-h1.intro-title::after,
-.faq-title::before,
-.faq-title::after {
+h1.intro-title::after {
     content: "";
     flex: 1;
     border-top: 2px solid var(--accent);
@@ -518,13 +508,11 @@ h1.intro-title::after,
 .intro-icon-circle {
     width: 90px;
     height: 90px;
-    /*background-color: var(--bg-image-shadow);*/
     background-color: var(--accent);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    /* color: var(--secondary-accent); */
     color: var(--text-white);
     font-size: 40px;
     flex-shrink: 0;
@@ -549,30 +537,19 @@ h1.intro-title::after,
     background-color: var(--accent);
 }
 
-.content-wrapper {
-    /* display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto; */
+.who-section h2.who-title {
+    color: var(--steps-title);
+}
 
+.content-wrapper {
     display: flex;
     align-items: center;
-    /* Aligns items vertically */
     justify-content: space-between;
     gap: 20px;
     padding-left: 6%;
 }
 
 .text-section {
-    /* flex: 1;
-    max-width: 80%;
-    background-color: rgba(255, 255, 255, 0.8);
-    padding: 1.5rem;
-    border-radius: 20px; */
-
-
     flex: 0 0 60%;
     background-color: rgba(255, 255, 255, 0.8);
     padding: 20px;
@@ -602,6 +579,10 @@ h1.intro-title::after,
     margin-bottom: 0.8rem;
 }
 
+.text-section li::marker {
+    content: "";
+}
+
 .text-section strong {
     color: var(--steps-number);
 }
@@ -625,25 +606,9 @@ h1.intro-title::after,
     border-radius: 10px;
 }
 
-@media (max-width: 900px) {
-    .content-wrapper {
-        flex-direction: column;
-        /* align-items: center; */
-    }
-
-    .text-section .image-section {
-        /* max-width: 100%;
-      padding-right: 0;
-      margin-bottom: 2rem; */
-        flex: 1 1 100%;
-    }
-
-    .image-section {
-        /* max-width: 100%; */
-        display: flex;
-        /* Ensure it's visible */
-        justify-content: center;
-    }
+.text-section .cta-get-in-touch {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
 }
 
 /* ***************************************
@@ -656,11 +621,12 @@ h1.intro-title::after,
 }
 
 .benefits-title,
-.tutor-title,
-.faq-title {
-    font-size: 2.5rem;
-    color: var(--benefits-heading);
+.tutor-title {
     margin-bottom: 2rem;
+}
+
+.benefits-title {
+    color: var(--secondary-accent);
 }
 
 .benefits-grid {
@@ -672,7 +638,6 @@ h1.intro-title::after,
 }
 
 .benefit-card {
-    /* background: var(--accent); */
     background: var(--benefits-bg);
     padding: 1.5rem;
     border-radius: 12px;
@@ -711,8 +676,6 @@ h1.intro-title::after,
 }
 
 .steps-title {
-    font-size: 2.5rem;
-    font-weight: bold;
     color: var(--text-white);
     margin-bottom: 2.5rem;
     text-align: center;
@@ -720,12 +683,11 @@ h1.intro-title::after,
 
 .steps-wrapper {
     display: flex;
-    /* justify-content: center; */
     justify-content: space-between;
     flex-wrap: wrap;
     max-width: 1200px;
     margin: 0 auto;
-    gap: 20px;
+    gap: 30px;
 }
 
 .step {
@@ -800,29 +762,9 @@ h1.intro-title::after,
     box-shadow: 0 4px 6px rgba(246, 244, 244, 0.8);
 }
 
-@media (max-width: 900px) {
-    .step {
-        flex: 1 1 100%;
-        /* Stacks them on smaller screens */
-    }
-
-    .steps-wrapper {
-        flex-direction: column;
-        align-items: center;
-    }
-}
-
-/* @media (max-width: 768px) {
-    .steps-wrapper {
-        flex-direction: column;
-        align-items: center;
-    }
-} */
-
 /* ****************************************
    PRICING Section
    **************************************** */
-
 .pricing-section {
     text-align: center;
     padding: 50px 20px;
@@ -833,6 +775,10 @@ h1.intro-title::after,
     font-size: 2.5rem;
     font-weight: bold;
     margin-bottom: 1.5rem;
+}
+
+.pricing-title {
+    color: var(--steps-title);
 }
 
 .pricing-container {
@@ -949,12 +895,6 @@ h1.intro-title::after,
     color: white;
 }
 
-@media (max-width: 768px) {
-    .pricing-container {
-        grid-template-columns: 1fr;
-    }
-}
-
 /* ****************************************
    FAQ Section
    **************************************** */
@@ -1058,24 +998,12 @@ h1.intro-title::after,
 .faq-footer {
     text-align: center;
     font-size: 1.5rem;
+    margin: 2rem;
 }
 
 .faq-footer .sup-text {
     vertical-align: super;
     font-size: smaller;
-}
-
-@media (max-width: 768px) {
-    .faq-container {
-        flex-direction: column;
-    }
-
-    .faq-image {
-        order: -1;
-        margin-bottom: 20px;
-        width: 340px;
-        height: 340px;
-    }
 }
 
 /* ****************************************
@@ -1087,14 +1015,15 @@ h1.intro-title::after,
     top: 0;
     width: 100%;
     height: 100%;
-    display: none;
-    background: rgba(0, 0, 0, 0.5);
     display: flex;
+    overflow-y: auto;
+    background: rgba(0, 0, 0, 0.5);
     align-items: center;
     justify-content: center;
-    opacity: 0;
     transition: opacity 0.3s ease-in-out;
     z-index: 1000;
+    padding: 1rem;
+    opacity: 0;
 }
 
 .modal-content {
@@ -1107,6 +1036,10 @@ h1.intro-title::after,
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     transform: translateY(-20px);
     transition: transform 0.3s ease-in-out;
+    padding: 2rem;
+    box-sizing: border-box;
+    max-height: 100%;
+    overflow-y: auto;
 }
 
 .modal-hidden {
@@ -1254,6 +1187,10 @@ textarea.error {
     margin-bottom: 1.5rem;
 }
 
+.kickstart-title {
+    color: var(--steps-number);
+}
+
 .kickstart-image {
     flex: 1;
     max-width: 40%;
@@ -1283,4 +1220,515 @@ footer {
     padding: 1.1rem;
     background-color: var(--benefits-bg);
     color: var(--text-black);
+}
+
+
+
+/* ****************************************
+   Responsive configuration
+   **************************************** */
+@media (max-width: 1180px) {
+    .content-wrapper {
+        flex-direction: column-reverse;
+        padding-left: 0;
+    }
+
+    .text-section {
+        flex: 0 0 100%;
+        width: 100%;
+    }
+
+    .image-section {
+        width: 40%;
+    }
+
+    .text-section {
+        padding: 1.5rem;
+    }
+
+    .text-section h2 {
+        font-size: 2rem;
+    }
+
+    .text-section p,
+    .text-section li {
+        font-size: clamp(1.3rem, 3.5vw, 1.5rem);
+    }
+
+    .modal {
+        top: 0;
+        padding: 30px 5px 10px 0;
+    }
+}
+
+@media (max-width: 990px) {
+    .tutor-text {
+        max-width: 90%;
+        text-align: center;
+    }
+
+    .tutor-image img {
+        width: 260px;
+        height: 260px;
+    }
+
+    .step-title {
+        font-size: clamp(1.5rem, 3.5vw, 2rem);
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    .steps-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .step {
+        display: flex;
+        align-items: flex-start;
+        gap: 1.5rem;
+        transition: transform 0.3s ease;
+        flex: 1 1 30%;
+        text-align: center;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .step-left {
+        flex-shrink: 0;
+    }
+
+    .step-number {
+        font-size: 4rem;
+        width: 120px;
+        height: 120px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .step-right {
+        flex-grow: 1;
+    }
+
+    .step-icon {
+        font-size: 2.5rem;
+    }
+
+    .step-text {
+        font-size: 1.3rem;
+        line-height: 1.6;
+        color: #444;
+    }
+
+    .faq-title {
+        font-size: clamp(1.5rem, 3.5vw, 2.5rem);
+    }
+}
+
+@media (max-width: 920px) {
+
+    .tutor-text p,
+    .trial-description,
+    .trial-next-step {
+        font-size: clamp(1.5rem, 2vw, 2rem);
+    }
+
+    .trial-benefits li {
+        font-size: clamp(1.5rem, 2vw, 1.8rem);
+    }
+
+    .steps-title {
+        color: var(--text-white);
+        margin-bottom: 1rem;
+        text-align: center;
+    }
+
+}
+
+@media screen and (max-width: 880px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: var(--nav-bg);
+        position: absolute;
+        top: 60px;
+        left: 0;
+        padding: 1rem 0;
+        gap: 1rem;
+        text-align: center;
+        margin-top: 0.5rem;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: block;
+        background: none;
+        border: none;
+        font-size: 2rem;
+        color: var(--nav-text);
+        margin-left: auto;
+        cursor: pointer;
+    }
+
+    .hamburger:hover {
+        color: var(--accent);
+    }
+
+    .trial-wrapper {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .trial-image,
+    .trial-content {
+        max-width: 100%;
+    }
+
+    .trial-content {
+        text-align: center;
+    }
+
+    .trial-benefits {
+        padding: 0 40px;
+    }
+
+    .trial-offer {
+        max-width: 60%;
+        width: 100%;
+        margin: 0 auto 30px;
+    }
+
+    .kickstart-image {
+        flex: 1;
+        max-width: 30%;
+        text-align: center;
+    }
+
+    .kickstart-content p,
+    .kickstart-content .trial-benefits li {
+        font-size: clamp(1.3rem, 3.5vw, 1.4rem);
+    }
+
+
+}
+
+@media screen and (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-content .hero-text {
+        font-size: clamp(1rem, 1.1rem + 1.2vw, 2rem);
+        padding: 1rem;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    .tutor-image img {
+        width: 240px;
+        height: 240px;
+    }
+
+    .tutor-text p,
+    .trial-description,
+    .trial-benefits li,
+    .trial-next-step,
+    .intro-text p {
+        font-size: clamp(1.4rem, 2vw, 2rem);
+    }
+
+    .trial-offer {
+        max-width: 100%;
+        width: 100%;
+        margin: 0 auto 20px;
+    }
+
+    .intro-container,
+    .intro-container.reverse {
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: center;
+    }
+
+    .intro-container .intro-text p,
+    .intro-container.reverse .intro-text p {
+        text-align: center;
+    }
+
+    .intro-text h2 {
+        text-align: center;
+    }
+
+    .intro-icon-circle {
+        width: 72px;
+        height: 72px;
+        font-size: 32px;
+        align-self: center;
+    }
+
+    .kickstart-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .kickstart-image {
+        flex: 1;
+        max-width: 30%;
+        text-align: center;
+    }
+
+    .trial-benefits li::before {
+        position: relative;
+        left: -8px;
+        font-size: 1.2rem;
+    }
+
+    .pricing-container {
+        grid-template-columns: 1fr;
+    }
+
+    .modal-content {
+        max-width: 600px;
+        width: 100%;
+    }
+
+    .cf-form-row {
+        flex-direction: column;
+    }
+
+    .contact-intro .contact-h1 {
+        font-size: clamp(1.6rem, 2vw, 2rem);
+    }
+
+    .contact-intro .contact-subheadline {
+        font-size: clamp(1rem, 2vw, 1.2rem);
+        margin-top: 1rem;
+        margin-bottom: 0;
+    }
+
+    .cf-form-row button {
+        margin-top: 0;
+    }
+
+    .faq-category-name {
+        font-size: 1.3rem;
+    }
+
+    .faq-question {
+        font-size: 1.1rem;
+    }
+
+    .faq-answer {
+        font-size: 1.1rem;
+    }
+
+    .faq-footer {
+        font-size: 1.3rem;
+        margin: 1rem;
+    }
+
+}
+
+@media screen and (max-width: 568px) {
+    .nav-spacer {
+        height: 0px;
+    }
+
+    .faq-section .nav-spacer {
+        height: 50px;
+    }
+
+    .tutor-image img {
+        width: 220px;
+        height: 220px;
+    }
+
+    .step {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .step-left {
+        margin: 0 auto;
+    }
+
+    .step-number {
+        width: 100px;
+        height: 100px;
+        font-size: 4rem;
+    }
+
+    .contact-intro .contact-h1 {
+        font-size: clamp(1.6rem, 2vw, 1.5rem);
+        margin-bottom: 0;
+    }
+
+    .modal {
+        top: 0;
+        padding: 30px 5px 10px 0;
+    }
+
+    .modal-content {
+        padding: 25px 40px;
+        border-radius: 25px;
+        width: 90%;
+        max-width: 600px;
+        padding: 1.5rem;
+        max-height: 100%;
+        font-size: 1rem;
+    }
+
+    .faq-title {
+        margin: 1.5rem 1rem;
+    }
+}
+
+@media screen and (max-width: 530px) {
+    .hero-text {
+        font-size: clamp(2.5rem, 5vw, 4rem);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .hero-content h2.hero-subtitle {
+        line-height: 4.5rem;
+    }
+
+    .hero-text {
+        font-size: 2rem;
+    }
+
+    .tutor-title,
+    .trial-title,
+    .steps-title {
+        font-size: 2.3rem;
+    }
+
+    .tutor-text {
+        max-width: 90%;
+        text-align: center;
+    }
+
+    .tutor-image img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .tutor-text p,
+    .trial-description,
+    .trial-next-step,
+    .trial-regular-price,
+    .intro-text p {
+        font-size: clamp(1.2rem, 2vw, 2rem);
+    }
+
+    .trial-image img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .trial-benefits {
+        padding: 0 20px;
+    }
+
+    .trial-discounted-price {
+        font-size: clamp(1.3rem, 2vw, 2rem);
+    }
+
+    .intro-text .intro-h1 {
+        font-size: clamp(1.7rem, 5vw, 2rem);
+    }
+
+    .contact-intro .contact-h1 {
+        font-size: clamp(1.7rem, 2vw, 2rem);
+        margin-bottom: 0;
+    }
+
+    .contact-h1 {
+        font-size: 1.2rem;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        font-size: 1rem;
+    }
+
+    .modal {
+        top: 0;
+        padding: 30px 5px 10px 0;
+    }
+
+    .cf-form-row .cta-get-in-touch {
+        width: 60%;
+        margin-top: 0.5rem;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .hero-content h1.hero-title {
+        font-size: clamp(1rem, 1.5rem + 1vw, 5rem);
+        line-height: 3.5rem;
+        margin-top: 7rem;
+        margin-bottom: 2rem;
+    }
+
+    .hero-content h2.hero-subtitle {
+        margin-top: 1rem;
+        line-height: 3.5rem;
+        font-size: clamp(1rem, 2.5rem + 1vw, 4rem);
+    }
+
+    .hero-text {
+        font-size: clamp(1rem, 1rem + 0.5vw, 2rem);
+        line-height: 1.5rem;
+    }
+
+    .hero-cta .cta-get-in-touch {
+        margin: auto;
+        margin-top: 1rem;
+    }
+
+    h2.tutor-title,
+    h2.trial-title,
+    h1.intro-title,
+    h2.who-title,
+    h2.benefits-title,
+    h2.steps-title,
+    h2.pricing-title,
+    h2.kickstart-title {
+        font-size: 2rem;
+    }
+
+    .tutor-image img {
+        width: 180px;
+        height: 180px;
+    }
+
+    .modal {
+        top: 0;
+        padding: 30px 5px 5px 0;
+    }
+
+    .text-section li,
+    .text-section p,
+    .step-text,
+    .trial-benefits li,
+    .kickstart-container p {
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and (max-height: 384px) {
+    .contact-intro .contact-h1 {
+        font-size: clamp(1.7rem, 2vw, 2rem);
+        margin-bottom: 0;
+    }
+
+
 }
