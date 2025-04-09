@@ -3,14 +3,19 @@ function formSubmission() {
     const form = document.getElementById('contactForm');
     const formMessageEl = document.getElementById('formMessage');
     const loadingMessageEl = document.getElementById('loadingMessage');
-    const submitButton = form.querySelector('button[type="submit"]');
 
     if (!form) {
-        console.error("No form with id 'contactForm' found.");
-        return;
+      console.debug("No contact form on this page.");
+      return;
     }
+    
+    if (form.dataset.listenerAttached === 'true') return;
+    
+    form.dataset.listenerAttached = 'true';
 
-    form.addEventListener('submit', function (event) {
+    const submitButton = form.querySelector('button[type="submit"]');
+
+    form.addEventListener('submit', async function (event) {
         /* Avoid submitting the form automatically */
         event.preventDefault();
         
