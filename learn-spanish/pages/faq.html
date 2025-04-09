@@ -11,10 +11,10 @@
     <!-- Google Fonts: Roboto, GochiHand, and Lexend -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel='preload' as='style'
-        href='https://fonts.googleapis.com/css2?family=Lexend&family=Gochi+Hand&family=Roboto&display=swap'>
+    <link rel="preload" as="style"
+        href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;600;700&family=Gochi+Hand&family=Roboto:wght@400;700&display=swap">
     <link rel="stylesheet"
-        href='https://fonts.googleapis.com/css2?family=Lexend&family=Gochi+Hand&family=Roboto&display=swap'>
+        href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;600;700&family=Gochi+Hand&family=Roboto:wght@400;700&display=swap">
     <script src="https://kit.fontawesome.com/5d44ca8e42.js" crossorigin="anonymous"></script>
 </head>
 
@@ -35,8 +35,7 @@
                     <li><a href="../../index.html#pricing-section">Pricing</a></li>
                     <li><a href="#faq-section">FAQ</a></li>
                     <li class="contact-menu-item">
-                        <button type="submit" class="cta-button cta-get-in-touch mobile-contact"
-                            onclick="document.getElementById('contactSection').scrollIntoView({ behavior: 'smooth' });">
+                        <button type="button" class="cta-button cta-get-in-touch openModalBtn mobile-contact">
                             <i class="fa-solid fa-envelope fa-beat" style="--fa-beat-scale: 1.2;"></i> Get in Touch
                         </button>
                     </li>
@@ -51,7 +50,8 @@
             <h2 class="faq-title">FAQs: Everything You Need to Know Before You Start!</h2>
             <div class="faq-container">
                 <div class="faq-image">
-                    <img src="../assets/illustrations/faq.svg" alt="Frequently Asked Questions - Man with a question mark">
+                    <img src="../assets/illustrations/faq.svg"
+                        alt="Frequently Asked Questions - Man with a question mark">
                 </div>
                 <div class="faq-content">
                     <div class="faq-category">
@@ -248,7 +248,8 @@
                     </div>
                 </div>
                 <div class="faq-footer">
-                    <span class="sup-text">*</span> If you have any other questions about our tutoring sessions and how we can help you learn
+                    <span class="sup-text">*</span> If you have any other questions about our tutoring sessions and how
+                    we can help you learn
                     Spanish online, please let us know! 📬 latintutor@perezneder.com
                 </div>
             </div>
@@ -261,7 +262,10 @@
         <p>© 2025 • Betina Perez Neder • All Rights Reserved.</p>
     </footer>
 
+    <script src="../js/utils.js"></script>
     <script src="../js/faqs-accordion.js"></script>
+    <script src="../js/open-cf.js"></script>
+    <script src="../js/form-submission.js"></script>
 </body>
 
 </html>
