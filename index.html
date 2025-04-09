@@ -19,31 +19,7 @@
 </head>
 
 <body>
-    <header class="top-nav">
-        <div class="nav-container">
-            <div class="logo">
-                <a href="#"> <img src="learn-spanish/assets/logos/small-logo.png" alt="Learn Spanish 123's logo"
-                        class="betina-logo"> Learn Spanish 123</a>
-            </div>
-            <button class="hamburger" aria-label="Toggle navigation">
-                <i class="fa-solid fa-bars"></i>
-            </button>
-            <nav>
-                <ul class="nav-links">
-                    <li><a href="#hero"><strong>Home</strong></a></li>
-                    <li><a href="#tutor-section">About</a></li>
-                    <li><a href="#pricing-section">Pricing</a></li>
-                    <li><a href="learn-spanish/pages/faq.html">FAQ</a></li>
-                    <li class="contact-menu-item">
-                        <button type="button" class="cta-button cta-get-in-touch openModalBtn mobile-contact">
-                            <i class="fa-solid fa-envelope fa-beat" style="--fa-beat-scale: 1.2;"></i> Get in Touch
-                        </button>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
+    <div id="header-placeholder"></div>
     <main>
         <!-- Hero Section -->
         <section id="hero" class="hero">
@@ -94,6 +70,7 @@
             </div>
         </section>
 
+        <!-- Trial section -->
         <section id="trial-upsell" class="trial-upsell">
             <h2 class="trial-title">Experience a 20-minute Trial Session!</h2>
             <div class="trial-wrapper">
@@ -198,16 +175,16 @@
                     <h2 class="who-title">Learning Spanish? This Is for You!</h2>
                     <p>This course is perfect for a wide range of learners, including:</p>
                     <ul>
-                        <li><i class="fa-brands fa-rocketchat" style="color: #CA6702;"></i><strong> Beginners:</strong>
+                        <li><i class="fa-brands fa-rocketchat icon-color"></i><strong> Beginners:</strong>
                             Start your Spanish journey with a solid foundation in a
                             friendly, no-pressure environment.</li>
-                        <li><i class="fa-brands fa-rocketchat" style="color: #CA6702;"></i><strong> Travelers:</strong>
+                        <li><i class="fa-brands fa-rocketchat icon-color"></i><strong> Travelers:</strong>
                             Learn essential phrases and tips to confidently navigate Latin
                             American countries.</li>
-                        <li><i class="fa-brands fa-rocketchat" style="color: #CA6702;"></i><strong>
+                        <li><i class="fa-brands fa-rocketchat icon-color"></i><strong>
                                 Professionals:</strong> Enhance your Spanish skills for business, career growth, and
                             professional communication.</li>
-                        <li><i class="fa-brands fa-rocketchat" style="color: #CA6702;"></i><strong> Seniors:</strong>
+                        <li><i class="fa-brands fa-rocketchat icon-color"></i><strong> Seniors:</strong>
                             Enjoy a relaxed, patient learning pace that allows you to grasp
                             Spanish comfortably at your own speed.</li>
                     </ul>
@@ -314,6 +291,7 @@
             </div>
         </section>
 
+        <!-- Pricing section -->
         <section id="pricing-section" class="pricing-section">
             <h2 class="pricing-title">Choose Your Perfect Learning Plan</h2>
             <div class="currency-toggle">
@@ -366,81 +344,19 @@
             <div id="terms-section" class="disclaimer-container">
                 <button class="toggle-disclaimer">View Terms & Conditions</button>
                 <div class="disclaimer-content">
-                    <p><i class="fa-solid fa-circle-info" style="color: #8a3903;"></i> The trial session is limited to
-                        <strong>one per student</strong>.</p>
-                    <p><i class="fa-solid fa-circle-info" style="color: #8a3903;"></i> Purchased session bundles
+                    <p><i class="fa-solid fa-circle-info icon-color"></i> The trial session is limited to
+                        <strong>one per student</strong>.
+                    </p>
+                    <p><i class="fa-solid fa-circle-info icon-color"></i> Purchased session bundles
                         <strong>must be used within 6 months</strong> from the date of
-                        purchase.</p>
-                    <p><i class="fa-solid fa-circle-info" style="color: #8a3903;"></i> All payments are
-                        <strong>non-refundable</strong> unless otherwise stated.</p>
-
+                        purchase.
+                    </p>
+                    <p><i class="fa-solid fa-circle-info icon-color"></i> All payments are
+                        <strong>non-refundable</strong> unless otherwise stated.
+                    </p>
                 </div>
             </div>
         </section>
-
-        <div id="contactModal" class="modal modal-hidden">
-            <div class="modal-content">
-                <span class="close" id="closeModal">&times;</span>
-                <div class="contact-intro">
-                    <div class="contact-h1">Start Your Spanish Journey Today! <span class="contact-break-last">Let's
-                            Chat.</span></div>
-                    <p class="contact-subheadline">
-                        Have questions or ready to book your first lesson? Send me a quick message and I'll get back to
-                        you.
-                    </p>
-                </div>
-
-                <form id="contactForm" name="contactForm" class="contact-form"
-                    action="https://fragrant-union-f59d.betinaperez.workers.dev" method="POST" novalidate>
-                    <div class="cf-form-row">
-                        <div class="form-group">
-                            <label for="firstName">First Name</label>
-                            <input type="text" id="firstName" name="firstName" placeholder="What's your First Name?"
-                                required minlength="2" maxlength="50">
-                            <span class="error-message" id="firstNameError" aria-live="polite"></span>
-                        </div>
-                        <div class="form-group">
-                            <label for="lastName">Last Name</label>
-                            <input type="text" id="lastName" name="lastName" placeholder="What's your Last Name?"
-                                required minlength="2" maxlength="50">
-                            <span class="error-message" id="lastNameError" aria-live="polite"></span>
-                        </div>
-                    </div>
-                    <div class="cf-form-row">
-                        <div class="form-group">
-                            <label for="email">Email Address</label>
-                            <input type="email" id="email" name="email" placeholder="What's your Email?" required
-                                maxlength="100">
-                            <span class="error-message" id="emailError" aria-live="polite"></span>
-                        </div>
-                        <div class="form-group">
-                            <label for="company">How Did You Hear About Us? (Optional)</label>
-                            <input type="text" id="company" name="company" placeholder="Google, Library, Friend, Other"
-                                maxlength="100">
-                            <span class="error-message" id="companyError" aria-live="polite"></span>
-                        </div>
-                    </div>
-                    <div class="cf-form-row">
-                        <div class="form-group full-width">
-                            <label for="message">Message</label>
-                            <textarea id="message" name="message"
-                                placeholder="Please leave a message and share your preferred lessons schedule and timezone."
-                                required maxlength="1000"></textarea>
-                            <span class="error-message" id="messageError" aria-live="polite"></span>
-                        </div>
-                    </div>
-                    <div class="cf-form-row submit-row">
-                        <button type="submit" class="cta-button cta-get-in-touch">
-                            <i class="fa-solid fa-envelope fa-beat" style="--fa-beat-scale: 1.2;"></i> Get in Touch
-                        </button>
-                    </div>
-                </form>
-                <div id="loadingMessage" role="status" aria-live="assertive" style="display: none;">
-                    <i class="fa-solid fa-spinner fa-spin"></i> Processing your submission, please wait ...
-                </div>
-                <div id="formMessage" aria-live="polite"></div>
-            </div>
-        </div>
 
         <!-- Free gift section -->
         <section class="kickstart-section">
@@ -465,7 +381,6 @@
                 </div>
             </div>
         </section>
-
     </main>
     <!-- Footer section -->
     <footer>
@@ -476,6 +391,7 @@
     <script src="learn-spanish/js/open-cf.js"></script>
     <script src="learn-spanish/js/form-submission.js"></script>
     <script src="learn-spanish/js/utils.js"></script>
+    <div id="contact-modal-placeholder"></div>
 </body>
 
 </html>
