@@ -541,6 +541,10 @@ h1.intro-title::after {
     color: var(--steps-title);
 }
 
+.icon-color {
+    color: #CA6702;
+}
+
 .content-wrapper {
     display: flex;
     align-items: center;
