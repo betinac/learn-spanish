@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function() {
+function openContactForm () {
     const modal = document.getElementById("contactModal");
     const openModalBtns = document.querySelectorAll(".openModalBtn");
     const closeModalBtn = document.querySelector(".close");
@@ -30,4 +30,6 @@ document.addEventListener("DOMContentLoaded", function() {
             setTimeout(() => modal.style.display = "none", 300);
         }
     });
-});
+}
+
+document.addEventListener("DOMContentLoaded", openContactForm)
