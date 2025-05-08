@@ -1,0 +1,1738 @@
+:root {
+    --primary-bg: #E2E8F4;
+    --secondary-bg: #f9f4ee;
+    --nav-bg: #FAF9F6;
+    --benefits-bg: #f7e1c1;
+    --pricing-bg: #f8f9fa;
+    --best-value-bg: #ffeeba;
+    --trial-section-bg: #f8d4a8;
+    --accent: #EE9B00;
+    --secondary-accent: #CA6702;
+    --tertiary-accent: #80A4ED;
+    --fourth-accent: #3447AA;
+    --fifth-accent: #f2E0E6;
+    --text-body: #222222;
+    --text-white: #fcf9f1;
+    --text-white-pale: #eae8e8;
+    --text-black: #333333;
+    --text-gray: #414040;
+    --text-light-gray: #888888;
+    --text-terms: #007bff;
+    --best-value-border: #ffca2c;
+    --best-value-border-hover: #e0a800;
+    --hero-title-font: 'Lexend', Arial, sans-serif;
+    --hero-subtitle-font: 'Gochi Hand', Arial, sans-serif;
+    --body-default-font: 'Roboto', Arial, sans-serif;
+    --sections-title-font: 'Lexend', Arial, sans-serif;
+    --font-default-size: 16px;
+    --h1-title: #373535;
+    --benefits-heading: #373535;
+    --benefits-icon: #f5833c;
+    --benefits-title: #CA6702;
+    --benefits-info: #4d4e51;
+    --steps-title: #d35400;
+    --steps-number: #8a3903;
+    --cform-error: #9D0000;
+    --cform-confirmation: #065906;
+    --nav-bg: #FAF9F6;
+    --nav-text: #13315C;
+    --nav-shadow: #9DD7EC1A;
+    --cta-text: #FFFFFF;
+    --cta-bg: #FC815F;
+    --cta-gradient-accent: #E9A112;
+}
+
+/* ****************************************
+   Global Styles
+   **************************************** */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--body-default-font);
+    font-size: var(--font-default-size);
+    color: var(--text-body);
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+strong {
+    font-weight: 700;
+}
+
+/* ****************************************
+   Top Navigation
+   **************************************** */
+.top-nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: var(--nav-bg);
+    box-shadow: 2px 4px 0 var(--nav-shadow);
+    z-index: 1000;
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0.5rem 1rem;
+}
+
+.logo a {
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--nav-text);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.nav-links li {
+    margin-left: 1.5rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--nav-text);
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--accent);
+}
+
+.logo a {
+    display: inline-flex;
+    align-items: end;
+    white-space: nowrap;
+}
+
+.betina-logo {
+    width: 2rem;
+    height: 2rem;
+    margin: 0 0.3rem 0 0.1rem;
+}
+
+/* ****************************************
+   Hamburger Menu for Mobile
+   **************************************** */
+.hamburger {
+    display: none;
+}
+
+/* ****************************************
+   Contact button for Desktop
+   **************************************** */
+.contact-menu-item a {
+    display: inline-block;
+    background: var(--cta-bg);
+    color: var(--cta-text);
+    padding: 0.5rem 1.5rem;
+    border-radius: 25px;
+    font-size: 1rem;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.contact-menu-item a:hover {
+    color: var(--cta-text);
+}
+
+.mobile-contact {
+    font-family: var(--body-default-font);
+    font-size: 16px;
+}
+
+/* ****************************************
+   Header Section
+   **************************************** */
+.nav-spacer {
+    height: 70px;
+}
+
+.cta-button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(90deg, var(--cta-gradient-accent), transparent) var(--accent);
+    color: var(--cta-text);
+    border-radius: 25px;
+    border: none;
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    transition: background-color 1s ease;
+    text-decoration: none;
+    cursor: pointer;
+    padding: 1rem 2rem;
+    gap: 0.5rem;
+    white-space: nowrap;
+}
+
+.cta-button i {
+    pointer-events: none;
+}
+
+.cta-button:hover,
+.cta-button:focus {
+    background: linear-gradient(90deg, var(--secondary-accent), transparent) var(--tertiary-accent);
+}
+
+.hero-cta .cta-get-in-touch {
+    white-space: nowrap;
+    margin: auto;
+    margin-top: 3rem;
+}
+
+.nav-links .cta-button {
+    padding: 0.7rem 1.5rem;
+}
+
+/* ****************************************
+   Hero Section
+   **************************************** */
+.hero {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background-image: url(../assets/background/jujuy.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+.hero:before {
+    content: '';
+    background-color: rgba(150, 80, 30, 0.5);
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    padding: 2rem;
+    width: 100%;
+}
+
+.hero-content h1.hero-title {
+    font-family: var(--hero-title-font);
+    font-size: clamp(1.8rem, 2.1rem + 1.1vw, 6rem);
+    font-style: normal;
+    line-height: 8rem;
+    color: var(--text-white);
+    margin-bottom: 1rem;
+}
+
+.hero-content h2.hero-subtitle {
+    font-family: var(--hero-subtitle-font);
+    font-size: clamp(1.5rem, 3.3rem + 2vw, 6rem);
+    font-style: normal;
+    line-height: 6rem;
+    color: var(--text-white);
+    margin-bottom: 1rem;
+}
+
+.hero-content .hero-text {
+    font-size: clamp(1rem, 1.1rem + 1.5vw, 2rem);
+    color: var(--text-white-pale);
+    margin-bottom: 1rem;
+}
+
+/* ****************************************
+   Meet your Tutor Section
+   **************************************** */
+.tutor-section {
+    background-color: #fdf6ec;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.tutor-title,
+.trial-title,
+.intro-title,
+.who-title,
+.benefits-title,
+.steps-title,
+.pricing-title,
+.kickstart-title {
+    font-family: var(--sections-title-font);
+    font-weight: 400;
+    font-style: normal;
+}
+
+h2.tutor-title,
+h2.trial-title,
+h2.intro-title,
+h2.who-title,
+h2.benefits-title,
+h2.steps-title,
+h2.pricing-title,
+h2.kickstart-title {
+    font-size: clamp(2.5rem, 3.5vw, 3rem);
+}
+
+.tutor-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.tutor-image img {
+    width: 340px;
+    height: 340px;
+    border-radius: 50%;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border: 5px solid var(--secondary-accent);
+    transition: transform 0.3s ease-in-out;
+}
+
+.tutor-image img:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+    filter: brightness(1.05);
+    transform: scale(1.05) rotate(3deg);
+}
+
+.tutor-text {
+    max-width: 60%;
+    text-align: left;
+}
+
+.highlight {
+    color: #d35400;
+    font-weight: bold;
+}
+
+.tutor-text p {
+    font-size: 1.5rem;
+    line-height: 1.6;
+    color: var(--text-black);
+    margin-bottom: 20px;
+}
+
+/* ****************************************
+   Trial Upsell Section
+   **************************************** */
+h2.trial-title {
+    color: var(--steps-title);
+}
+
+.trial-upsell {
+    background: var(--trial-section-bg);
+    padding: 2rem;
+    text-align: center;
+}
+
+.trial-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 20px;
+}
+
+.trial-image {
+    flex: 1;
+    max-width: 40%;
+    text-align: center;
+}
+
+.trial-image img {
+    width: 100%;
+    height: auto;
+}
+
+.trial-content {
+    flex: 1;
+    text-align: left;
+    max-width: 60%;
+    margin: 0 auto;
+}
+
+.trial-title {
+    margin-bottom: 20px;
+}
+
+.trial-description,
+.trial-next-step {
+    font-size: 1.5rem;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.trial-benefits {
+    list-style: none;
+    padding: 0;
+    margin: 2rem 0;
+    text-align: left;
+}
+
+.trial-benefits li {
+    font-size: 1.4rem;
+    color: #333;
+    margin-bottom: 10px;
+    padding-left: 25px;
+    position: relative;
+}
+
+.trial-benefits li::before {
+    content: '✔';
+    position: absolute;
+    left: 0;
+    color: #28a745;
+    font-size: 1.2rem;
+}
+
+.trial-wrapper .cta-get-in-touch {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+
+.trial-offer {
+    background-color: var(--benefits-bg);
+    border-radius: 20px;
+    padding: 20px;
+    font-size: 1.5rem;
+    margin: 20px 0;
+}
+
+.trial-special-text {
+    background-color: var(--steps-title);
+    color: var(--text-white);
+    padding: 2px 10px;
+    border-radius: 4px;
+    font-size: 1.8rem;
+    line-height: 4rem;
+}
+
+.trial-regular-price {
+    text-decoration: line-through;
+    color: var(--text-light-gray);
+    margin-right: 8px;
+    font-size: 1.2rem;
+}
+
+.trial-discounted-price {
+    color: var(--steps-title);
+    font-weight: bold;
+    font-size: 1.6rem;
+}
+
+/* ***************************************
+   Intro Section - Ready to Speak Spanish?
+   *************************************** */
+.intro-section {
+    width: 100%;
+    padding: 2rem;
+}
+
+.intro-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.intros-text {
+    max-width: 1200px;
+    margin: 0 0 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+h1.intro-title,
+.faq-title {
+    display: flex;
+    font-size: clamp(2.5rem, 3.5vw, 3rem);
+    margin-bottom: 0.5rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--steps-number);
+}
+
+h1.intro-title::before,
+h1.intro-title::after {
+    content: "";
+    flex: 1;
+    border-top: 2px solid var(--accent);
+    margin: 0 10px;
+}
+
+.intro-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.intro-container.reverse {
+    flex-direction: row-reverse;
+}
+
+.intro-container:not(.reverse) .intro-text {
+    text-align: left;
+}
+
+.intro-container.reverse .intro-text {
+    text-align: right;
+}
+
+.intro-icon-circle {
+    width: 90px;
+    height: 90px;
+    background-color: var(--accent);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-white);
+    font-size: 40px;
+    flex-shrink: 0;
+}
+
+.intro-text h2 {
+    font-size: clamp(1.5rem, 3.5vw, 2rem);
+    margin-bottom: 1.5rem;
+    color: var(--secondary-accent);
+}
+
+.intro-text p {
+    font-size: clamp(1rem, 3.5vw, 1.5rem);
+}
+
+/* ***************************************
+   Who is this For Section
+   *************************************** */
+.who-section {
+    padding: 4rem 2rem;
+    color: var(--text-black);
+    background-color: var(--accent);
+}
+
+.who-section h2.who-title {
+    color: var(--steps-title);
+}
+
+.icon-color {
+    color: #CA6702;
+}
+
+.content-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding-left: 6%;
+}
+
+.text-section {
+    flex: 0 0 60%;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.text-section h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: var(--text-black);
+}
+
+.text-section p {
+    font-size: 1.5rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    color: var(--text-black);
+}
+
+.text-section ul {
+    padding-left: 1.5rem;
+}
+
+.text-section li {
+    font-size: 1.4rem;
+    margin-bottom: 0.8rem;
+}
+
+.text-section li::marker {
+    content: "";
+}
+
+.text-section strong {
+    color: var(--steps-number);
+}
+
+.text-section .hero-cta {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.image-section {
+    flex: 0 0 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-section img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.text-section .cta-get-in-touch {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+
+/* ***************************************
+   Benefits Section
+   *************************************** */
+.benefits-section {
+    text-align: center;
+    background-color: var(--secondary-bg);
+    padding: 4rem 2rem;
+}
+
+.benefits-title,
+.tutor-title {
+    margin-bottom: 2rem;
+}
+
+.benefits-title {
+    color: var(--secondary-accent);
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.benefit-card {
+    background: var(--benefits-bg);
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    text-align: center;
+}
+
+.benefit-card:hover {
+    transform: translateY(-5px);
+}
+
+.benefit-card i {
+    font-size: 2rem;
+    color: var(--benefits-icon);
+    margin-bottom: 1rem;
+}
+
+.benefit-card h3 {
+    font-size: 1.5rem;
+    color: var(--benefits-title);
+    margin-bottom: 0.5rem;
+}
+
+.benefit-card p {
+    font-size: 1.2rem;
+    color: var(--benefits-info);
+}
+
+/* ***************************************
+   Steps Section
+   *************************************** */
+.steps-container {
+    padding: 60px 20px;
+    background-color: var(--steps-title);
+}
+
+.steps-title {
+    color: var(--text-white);
+    margin-bottom: 2.5rem;
+    text-align: center;
+}
+
+.steps-wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 30px;
+}
+
+.step {
+    background: var(--text-white);
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    flex: 1 1 30%;
+    max-width: 100%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeIn 0.8s ease-in-out forwards;
+    text-align: center;
+}
+
+.step:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.step-number {
+    font-size: 7rem;
+    font-weight: bold;
+    line-height: normal;
+    color: var(--steps-number);
+    background-color: var(--accent);
+    border-radius: 50%;
+    width: 130px;
+    height: 130px;
+    display: inline-block;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.step-icon {
+    font-size: 3rem;
+    color: var(--steps-title);
+    margin-bottom: 10px;
+}
+
+.step-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.step-text {
+    font-size: 1.3rem;
+    color: #444;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.steps-container .hero-cta {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.steps-container .hero-cta .cta-get-in-touch {
+    box-shadow: 0 4px 6px rgba(246, 244, 244, 0.8);
+}
+
+/* ****************************************
+   PRICING Section
+   **************************************** */
+.pricing-section {
+    text-align: center;
+    padding: 50px 20px;
+    background: var(--pricing-bg);
+}
+
+.pricing-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+}
+
+.pricing-title {
+    color: var(--steps-title);
+}
+
+.pricing-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    max-width: 1100px;
+    margin: auto;
+    padding: 2rem;
+}
+
+.pricing-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.pricing-card:hover {
+    transform: scale(1.05);
+}
+
+.pricing-card-title {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.pricing-duration {
+    font-size: 1rem;
+    color: var(--text-gray);
+    margin-bottom: 20px;
+}
+
+.package-price {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 20px auto;
+}
+
+.regular-price {
+    text-decoration: line-through;
+    color: var(--text-light-gray);
+    margin-right: 8px;
+}
+
+.discounted-price {
+    color: var(--steps-title);
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.btn {
+    background: var(--secondary-accent);
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background: var(--steps-number);
+}
+
+.best-value {
+    background: var(--best-value-bg);
+    border: 2px solid var(--best-value-border);
+}
+
+.highlight-btn {
+    background: var(--best-value-border);
+    color: var(--text-black);
+}
+
+.highlight-btn:hover {
+    background: var(--best-value-border-hover);
+}
+
+.disclaimer-content {
+    display: none;
+    padding: 10px;
+}
+
+.toggle-disclaimer {
+    background: none;
+    border: none;
+    color: var(--text-terms);
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.currency-toggle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.currency-btn {
+    background: var(--text-white);
+    border: none;
+    padding: 8px 15px;
+    margin: 0 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.currency-btn.active {
+    background: var(--secondary-accent);
+    color: white;
+}
+
+/* ****************************************
+   FAQ Section
+   **************************************** */
+.faq-section {
+    background-color: var(--accent);
+}
+
+.faq-title {
+    margin-top: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.faq-container {
+    align-items: center;
+    justify-content: center;
+    max-width: 1200px;
+    margin: auto;
+    padding-bottom: 40px;
+}
+
+.faq-image {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.faq-image img {
+    max-width: 30%;
+    border-radius: 10px;
+    height: auto;
+}
+
+.faq-content {
+    flex: 1;
+    padding: 20px;
+}
+
+.faq-category {
+    margin-bottom: 2.5rem;
+}
+
+.faq-category-name {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.faq-icon {
+    background: var(--steps-number);
+    color: var(--benefits-bg);
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+    flex-shrink: 0;
+    font-size: 1.5rem;
+}
+
+.faq-item {
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+}
+
+.faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.3rem;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 10px;
+    background: var(--benefits-bg);
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.faq-question:hover {
+    background: var(--secondary-accent);
+    color: var(--text-white);
+}
+
+.faq-answer {
+    display: none;
+    padding: 10px;
+    font-size: 1.3rem;
+    background: var(--text-white);
+    border-radius: 5px;
+}
+
+.faq-question span {
+    font-size: 1.3rem;
+    color: var(--benefits-icon);
+}
+
+.faq-footer {
+    text-align: center;
+    font-size: 1.5rem;
+    margin: 2rem;
+}
+
+.faq-footer .sup-text {
+    vertical-align: super;
+    font-size: smaller;
+}
+
+/* ****************************************
+   Contact Form Section
+   **************************************** */
+.modal {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    overflow-y: auto;
+    background: rgba(0, 0, 0, 0.5);
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.3s ease-in-out;
+    z-index: 1000;
+    padding: 1rem;
+    opacity: 0;
+}
+
+.modal-content {
+    background: var(--benefits-bg);
+    padding: 25px 40px;
+    border-radius: 20px;
+    width: 90%;
+    max-width: 1000px;
+    position: relative;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transform: translateY(-20px);
+    transition: transform 0.3s ease-in-out;
+    padding: 2rem;
+    box-sizing: border-box;
+    max-height: 100%;
+    overflow-y: auto;
+}
+
+.modal-hidden {
+    display: none;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.modal-visible {
+    display: flex;
+    visibility: visible;
+    opacity: 1;
+    z-index: 9999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.close {
+    color: var(--text-black);
+    background-color: var(--accent);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: var(--text-white);
+}
+
+.contact-intro {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.contact-intro .contact-h1 {
+    font-size: 2.1rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: var(--steps-number);
+}
+
+.contact-subheadline {
+    font-size: 1.2rem;
+    color: var(--benefits-heading);
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.cf-form-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.form-group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group.full-width {
+    flex: 1 1 100%;
+}
+
+.form-group label {
+    margin-bottom: 0.3rem;
+}
+
+.form-group input,
+.form-group textarea {
+    padding: 0.8rem;
+    border: 1px solid var(--benefits-title);
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.cf-form-row .cta-get-in-touch {
+    width: 40%;
+    margin: auto;
+    margin-top: 1.5rem;
+}
+
+input.error,
+textarea.error {
+    border: 1.5px solid var(--cform-error);
+}
+
+.error-message {
+    color: var(--cform-error);
+}
+
+.summary-message {
+    font-size: 1.1rem;
+    padding: 1rem;
+    text-align: center;
+    margin-top: 0.25rem;
+}
+
+.confirmation-message {
+    color: var(--cform-confirmation);
+}
+
+/* ****************************************
+   Kickstart Section
+   **************************************** */
+.kickstart-section {
+    padding: 2rem 1rem;
+    background: var(--trial-section-bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.kickstart-container {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    align-items: center;
+    gap: 2.5rem;
+}
+
+.kickstart-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+}
+
+.kickstart-title {
+    color: var(--steps-number);
+}
+
+.kickstart-image {
+    flex: 1;
+    max-width: 40%;
+    text-align: center;
+}
+
+.kickstart-image img {
+    width: 100%;
+    height: auto;
+}
+
+.kickstart-content {
+    flex: 1;
+    font-size: 1.5rem;
+}
+
+.kickstart-content .btn {
+    margin: 2rem auto;
+    font-size: 1.2rem;
+}
+
+/* ****************************************
+   Footer Section
+   **************************************** */
+footer {
+    text-align: center;
+    padding: 1.1rem;
+    background-color: var(--benefits-bg);
+    color: var(--text-black);
+}
+
+
+
+/* ****************************************
+   Responsive configuration
+   **************************************** */
+@media (max-width: 1180px) {
+    .content-wrapper {
+        flex-direction: column-reverse;
+        padding-left: 0;
+    }
+
+    .text-section {
+        flex: 0 0 100%;
+        width: 100%;
+    }
+
+    .image-section {
+        width: 40%;
+    }
+
+    .text-section {
+        padding: 1.5rem;
+    }
+
+    .text-section h2 {
+        font-size: 2rem;
+    }
+
+    .text-section p,
+    .text-section li {
+        font-size: clamp(1.3rem, 3.5vw, 1.5rem);
+    }
+
+    .modal {
+        top: 0;
+        padding: 30px 5px 10px 0;
+    }
+}
+
+@media (max-width: 990px) {
+    .tutor-text {
+        max-width: 90%;
+        text-align: center;
+    }
+
+    .tutor-image img {
+        width: 260px;
+        height: 260px;
+    }
+
+    .step-title {
+        font-size: clamp(1.5rem, 3.5vw, 2rem);
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    .steps-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .step {
+        display: flex;
+        align-items: flex-start;
+        gap: 1.5rem;
+        transition: transform 0.3s ease;
+        flex: 1 1 30%;
+        text-align: center;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .step-left {
+        flex-shrink: 0;
+    }
+
+    .step-number {
+        font-size: 4rem;
+        width: 120px;
+        height: 120px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .step-right {
+        flex-grow: 1;
+    }
+
+    .step-icon {
+        font-size: 2.5rem;
+    }
+
+    .step-text {
+        font-size: 1.3rem;
+        line-height: 1.6;
+        color: #444;
+    }
+
+    .faq-title {
+        font-size: clamp(1.5rem, 3.5vw, 2.5rem);
+    }
+}
+
+@media (max-width: 920px) {
+
+    .tutor-text p,
+    .trial-description,
+    .trial-next-step {
+        font-size: clamp(1.5rem, 2vw, 2rem);
+    }
+
+    .trial-benefits li {
+        font-size: clamp(1.5rem, 2vw, 1.8rem);
+    }
+
+    .steps-title {
+        color: var(--text-white);
+        margin-bottom: 1rem;
+        text-align: center;
+    }
+
+}
+
+@media screen and (max-width: 880px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: var(--nav-bg);
+        position: absolute;
+        top: 60px;
+        left: 0;
+        padding: 1rem 0;
+        gap: 1rem;
+        text-align: center;
+        margin-top: 0.5rem;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: block;
+        background: none;
+        border: none;
+        font-size: 2rem;
+        color: var(--nav-text);
+        margin-left: auto;
+        cursor: pointer;
+    }
+
+    .hamburger:hover {
+        color: var(--accent);
+    }
+
+    .trial-wrapper {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .trial-image,
+    .trial-content {
+        max-width: 100%;
+    }
+
+    .trial-content {
+        text-align: center;
+    }
+
+    .trial-benefits {
+        padding: 0 40px;
+    }
+
+    .trial-offer {
+        max-width: 60%;
+        width: 100%;
+        margin: 0 auto 30px;
+    }
+
+    .kickstart-image {
+        flex: 1;
+        max-width: 30%;
+        text-align: center;
+    }
+
+    .kickstart-content p,
+    .kickstart-content .trial-benefits li {
+        font-size: clamp(1.3rem, 3.5vw, 1.4rem);
+    }
+
+
+}
+
+@media screen and (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-content .hero-text {
+        font-size: clamp(1rem, 1.1rem + 1.2vw, 2rem);
+        padding: 1rem;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    .tutor-image img {
+        width: 240px;
+        height: 240px;
+    }
+
+    .tutor-text p,
+    .trial-description,
+    .trial-benefits li,
+    .trial-next-step,
+    .intro-text p {
+        font-size: clamp(1.4rem, 2vw, 2rem);
+    }
+
+    .trial-offer {
+        max-width: 100%;
+        width: 100%;
+        margin: 0 auto 20px;
+    }
+
+    .intro-container,
+    .intro-container.reverse {
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: center;
+    }
+
+    .intro-container .intro-text p,
+    .intro-container.reverse .intro-text p {
+        text-align: center;
+    }
+
+    .intro-text h2 {
+        text-align: center;
+    }
+
+    .intro-icon-circle {
+        width: 72px;
+        height: 72px;
+        font-size: 32px;
+        align-self: center;
+    }
+
+    .kickstart-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .kickstart-image {
+        flex: 1;
+        max-width: 30%;
+        text-align: center;
+    }
+
+    .trial-benefits li::before {
+        position: relative;
+        left: -8px;
+        font-size: 1.2rem;
+    }
+
+    .pricing-container {
+        grid-template-columns: 1fr;
+    }
+
+    .modal-content {
+        max-width: 600px;
+        width: 100%;
+    }
+
+    .cf-form-row {
+        flex-direction: column;
+    }
+
+    .contact-intro .contact-h1 {
+        font-size: clamp(1.6rem, 2vw, 2rem);
+    }
+
+    .contact-intro .contact-subheadline {
+        font-size: clamp(1rem, 2vw, 1.2rem);
+        margin-top: 1rem;
+        margin-bottom: 0;
+    }
+
+    .cf-form-row button {
+        margin-top: 0;
+    }
+
+    .faq-category-name {
+        font-size: 1.3rem;
+    }
+
+    .faq-question {
+        font-size: 1.1rem;
+    }
+
+    .faq-answer {
+        font-size: 1.1rem;
+    }
+
+    .faq-footer {
+        font-size: 1.3rem;
+        margin: 1rem;
+    }
+
+}
+
+@media screen and (max-width: 568px) {
+    .nav-spacer {
+        height: 0px;
+    }
+
+    .faq-section .nav-spacer {
+        height: 50px;
+    }
+
+    .tutor-image img {
+        width: 220px;
+        height: 220px;
+    }
+
+    .step {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .step-left {
+        margin: 0 auto;
+    }
+
+    .step-number {
+        width: 100px;
+        height: 100px;
+        font-size: 4rem;
+    }
+
+    .contact-intro .contact-h1 {
+        font-size: clamp(1.6rem, 2vw, 1.5rem);
+        margin-bottom: 0;
+    }
+
+    .modal {
+        top: 0;
+        padding: 30px 5px 10px 0;
+    }
+
+    .modal-content {
+        padding: 25px 40px;
+        border-radius: 25px;
+        width: 90%;
+        max-width: 600px;
+        padding: 1.5rem;
+        max-height: 100%;
+        font-size: 1rem;
+    }
+
+    .faq-title {
+        margin: 1.5rem 1rem;
+    }
+}
+
+@media screen and (max-width: 530px) {
+    .hero-text {
+        font-size: clamp(2.5rem, 5vw, 4rem);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .hero-content h2.hero-subtitle {
+        line-height: 4.5rem;
+    }
+
+    .hero-text {
+        font-size: 2rem;
+    }
+
+    .tutor-title,
+    .trial-title,
+    .steps-title {
+        font-size: 2.3rem;
+    }
+
+    .tutor-text {
+        max-width: 90%;
+        text-align: center;
+    }
+
+    .tutor-image img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .tutor-text p,
+    .trial-description,
+    .trial-next-step,
+    .trial-regular-price,
+    .intro-text p {
+        font-size: clamp(1.2rem, 2vw, 2rem);
+    }
+
+    .trial-image img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .trial-benefits {
+        padding: 0 20px;
+    }
+
+    .trial-discounted-price {
+        font-size: clamp(1.3rem, 2vw, 2rem);
+    }
+
+    .intro-text .intro-h1 {
+        font-size: clamp(1.7rem, 5vw, 2rem);
+    }
+
+    .contact-intro .contact-h1 {
+        font-size: clamp(1.7rem, 2vw, 2rem);
+        margin-bottom: 0;
+    }
+
+    .contact-h1 {
+        font-size: 1.2rem;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        font-size: 1rem;
+    }
+
+    .modal {
+        top: 0;
+        padding: 30px 5px 10px 0;
+    }
+
+    .cf-form-row .cta-get-in-touch {
+        width: 60%;
+        margin-top: 0.5rem;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .hero-content h1.hero-title {
+        font-size: clamp(1rem, 1.5rem + 1vw, 5rem);
+        line-height: 3.5rem;
+        margin-top: 7rem;
+        margin-bottom: 2rem;
+    }
+
+    .hero-content h2.hero-subtitle {
+        margin-top: 1rem;
+        line-height: 3.5rem;
+        font-size: clamp(1rem, 2.5rem + 1vw, 4rem);
+    }
+
+    .hero-text {
+        font-size: clamp(1rem, 1rem + 0.5vw, 2rem);
+        line-height: 1.5rem;
+    }
+
+    .hero-cta .cta-get-in-touch {
+        margin: auto;
+        margin-top: 1rem;
+    }
+
+    h2.tutor-title,
+    h2.trial-title,
+    h1.intro-title,
+    h2.who-title,
+    h2.benefits-title,
+    h2.steps-title,
+    h2.pricing-title,
+    h2.kickstart-title {
+        font-size: 2rem;
+    }
+
+    .tutor-image img {
+        width: 180px;
+        height: 180px;
+    }
+
+    .modal {
+        top: 0;
+        padding: 30px 5px 5px 0;
+    }
+
+    .text-section li,
+    .text-section p,
+    .step-text,
+    .trial-benefits li,
+    .kickstart-container p {
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and (max-height: 384px) {
+    .contact-intro .contact-h1 {
+        font-size: clamp(1.7rem, 2vw, 2rem);
+        margin-bottom: 0;
+    }
+
+
+}
