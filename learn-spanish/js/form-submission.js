@@ -79,7 +79,7 @@ function formSubmission() {
         }
 
         const companyValue = company.value.trim().toLowerCase();
-        const disallowedCompany = ['google'];
+        const disallowedCompany = ['none'];
         if (companyValue.includes(disallowedCompany)) {
           isValid = false;
           email.classList.add('error');
