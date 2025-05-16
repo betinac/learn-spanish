@@ -7,21 +7,20 @@ function clickHamburgerMenu() {
 
     const hamburgerIcon = hamburger.querySelector('i');
     
-      hamburger.addEventListener('click', function () {
-        navLinks.classList.toggle('active');
-  
-        if (navLinks.classList.contains('active')) {
-          hamburgerIcon.classList.remove('fa-bars');
-          hamburgerIcon.classList.add('fa-xmark');
-        } else {
-          hamburgerIcon.classList.remove('fa-xmark');
-          hamburgerIcon.classList.add('fa-bars');
-        }
-      });
-    
+    hamburger.addEventListener('click', function () {
+      navLinks.classList.toggle('active');
+
+      if (navLinks.classList.contains('active')) {
+        hamburgerIcon.classList.remove('fa-bars');
+        hamburgerIcon.classList.add('fa-xmark');
+      } else {
+        hamburgerIcon.classList.remove('fa-xmark');
+        hamburgerIcon.classList.add('fa-bars');
+      }
+    });
 }
 
-function loadHeader() {
+function loadHeader(callback) {
   fetch('/learn-spanish/pages/nav.html')
     .then(res => res.text())
     .then(data => {
@@ -30,6 +29,7 @@ function loadHeader() {
       setTimeout(() => {
         clickHamburgerMenu();
         openContactForm();
+        if (callback) callback();
       }, 0);
     })
     .catch(err => console.error('Nav bar load failed:', err));
@@ -50,6 +50,35 @@ function loadContactModal() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  loadHeader();
+  loadHeader(() => {
+    scrollSpyNavHighlight();
+  });
   loadContactModal();
 });
+
+function scrollSpyNavHighlight() {
+  const sections = document.querySelectorAll("main section[id]");
+  const navLinks = document.querySelectorAll(".nav-links a");
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const id = entry.target.getAttribute("id");
+
+        navLinks.forEach(link => {
+          link.classList.remove("nav-active");
+
+          if (link.getAttribute("href").includes(`#${id}`)) {
+            link.classList.add("nav-active");
+          }
+        });
+      }
+    });
+  }, {
+    threshold: 0.15
+  });
+
+  sections.forEach(section => observer.observe(section));
+}
+
+document.addEventListener('DOMContentLoaded', scrollSpyNavHighlight);
