@@ -1,37 +1,42 @@
 :root {
     --primary-bg: #E2E8F4;
-    --secondary-bg: #f9f4ee;
+    --secondary-bg: #F9F4EE;
     --nav-bg: #FAF9F6;
-    --benefits-bg: #f7e1c1;
-    --pricing-bg: #f8f9fa;
-    --best-value-bg: #ffeeba;
-    --trial-section-bg: #f8d4a8;
+    --benefits-bg: #F7E1C1;
+    --pricing-bg: #F8F9FA;
+    --best-value-bg: #FFEEBA;
+    --trial-section-bg: #F8D4A8;
+    --tutor-section-bg: #FdF6EC;
+    --lp-bundle-section-bg: #F3EDE7;
+    --countdown-bg: #333333;
     --accent: #EE9B00;
     --secondary-accent: #CA6702;
     --tertiary-accent: #80A4ED;
     --fourth-accent: #3447AA;
-    --fifth-accent: #f2E0E6;
+    --fifth-accent: #F2E0E6;
     --text-body: #222222;
-    --text-white: #fcf9f1;
-    --text-white-pale: #eae8e8;
+    --text-white: #FCF9F1;
+    --text-white-pale: #EAE8E8;
     --text-black: #333333;
     --text-gray: #414040;
     --text-light-gray: #888888;
-    --text-terms: #007bff;
-    --best-value-border: #ffca2c;
-    --best-value-border-hover: #e0a800;
+    --text-dark-gray: #555555;
+    --text-terms: #007BFF;
+    --best-value-border: #FFCA2C;
+    --best-value-border-hover: #E0A800;
     --hero-title-font: 'Lexend', Arial, sans-serif;
     --hero-subtitle-font: 'Gochi Hand', Arial, sans-serif;
     --body-default-font: 'Roboto', Arial, sans-serif;
     --sections-title-font: 'Lexend', Arial, sans-serif;
+    --countdown-font: 'Courier New', Courier, monospace;
     --font-default-size: 16px;
     --h1-title: #373535;
     --benefits-heading: #373535;
-    --benefits-icon: #f5833c;
+    --benefits-icon: #F5833C;
     --benefits-title: #CA6702;
-    --benefits-info: #4d4e51;
-    --steps-title: #d35400;
-    --steps-number: #8a3903;
+    --benefits-info: #4D4E51;
+    --steps-title: #D35400;
+    --steps-number: #8A3903;
     --cform-error: #9D0000;
     --cform-confirmation: #065906;
     --nav-bg: #FAF9F6;
@@ -40,6 +45,12 @@
     --cta-text: #FFFFFF;
     --cta-bg: #FC815F;
     --cta-gradient-accent: #E9A112;
+    --lp-timeline: #FF5722;
+    --lp-timeline-dark: #E64A19;
+    --lp-highlight: #FFD500;
+    --lp-bundle-left-h2: #444444;
+    --lp-bundle-left-p: #666666;
+    --lp-video-placeholder: #DDDDDD;
 }
 
 /* ****************************************
@@ -199,6 +210,7 @@ strong {
     white-space: nowrap;
     margin: auto;
     margin-top: 3rem;
+    background-color: var(--lp-timeline);
 }
 
 .nav-links .cta-button {
@@ -266,7 +278,7 @@ strong {
    Meet your Tutor Section
    **************************************** */
 .tutor-section {
-    background-color: #fdf6ec;
+    background-color: var(--tutor-section-bg);
     padding: 50px 20px;
     text-align: center;
 }
@@ -327,7 +339,7 @@ h2.kickstart-title {
 }
 
 .highlight {
-    color: #d35400;
+    color: var(--steps-title);
     font-weight: bold;
 }
 
@@ -385,7 +397,7 @@ h2.trial-title {
 .trial-description,
 .trial-next-step {
     font-size: 1.5rem;
-    color: #555;
+    color: var(--text-dark-gray);
     margin-bottom: 20px;
 }
 
@@ -1220,6 +1232,317 @@ textarea.error {
     font-size: 1.2rem;
 }
 
+/* **********************************************
+   Paid 6-day Spanish Launch Pad course Section
+   ********************************************** */
+.lp-page {
+    background-color: var(--tutor-section-bg);
+    width: 100%;
+}
+
+.lp-header {
+    background: url(../assets/background/cataratas-iguazu.jpg) center/cover no-repeat;
+    color: var(--tutor-section-bg);
+    text-align: center;
+    padding: 100px;
+    position: relative;
+}
+
+.lp-overlay {
+    background-color: rgba(0,0,0,0.6);
+    padding: 40px 40px 10px;
+    border-radius: 12px;
+    display: inline-block;
+}
+
+.lp-overlay h1, .lp-overlay h2 {
+    font-family: var(--hero-subtitle-font);
+    font-size: clamp(1.5rem, 3.3rem + 1vw, 6rem);
+    font-style: normal;
+    line-height: 6rem;
+    color: var(--text-white);
+    margin-bottom: 1rem;
+}
+
+.lp-highlight, .lp-highlight-text {
+    position: relative;
+}
+
+.lp-highlight {
+    display: inline-block;
+    color: var(--steps-title);
+}
+
+.lp-highlight:before { 
+    content: " ";
+    display: block;
+    height: 75%;
+    width: 100%;
+    margin-left: -5px;
+    margin-right: -5px;
+    position: absolute;
+    background: var(--lp-highlight);
+    transform: rotate(2deg);
+    top: -1px;
+    left: -1px;
+    border-radius: 20% 25% 20% 24%;
+    padding: 10px 3px 3px 10px;
+}
+
+.lp-subheadline {
+    margin: 10px 0 30px 0px;
+    font-family: var(--body-default-font);
+    font-size: clamp(1rem, 1.1rem + 1.5vw, 2rem);
+    color: var(--text-white-pale);
+}
+
+.lp-subheadline .highlight {
+    color: var(--accent);
+    font-weight: bold;
+}
+
+.lp-cta-button {
+    background-color: var(--lp-timeline);
+    color: var(--text-white);
+}
+
+.lp-cta-button:hover {
+    background-color: var(--lp-timeline-dark);
+}
+
+/* ****************************************
+   Launch Pad Countdown
+   **************************************** */
+.flip-clock {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    font-family: var(--countdown-font)
+}
+
+.flip-clock p {
+    font-size: clamp(1.25rem, 1.3rem + 1vw, 2rem);
+}
+
+.flip-unit {
+    background: var(--countdown-bg);
+    color: var(--text-white);
+    font-size: 2.5rem;
+    width: 80px;
+    height: 80px;
+    perspective: 1000px;
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+}
+
+.flip-unit span {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    line-height: 80px;
+    display: block;
+    backface-visibility: hidden;
+    transition: transform 0.5s;
+}
+
+.flip-unit .top {
+    z-index: 2;
+    transform: rotateX(0deg);
+}
+
+.flip-unit .bottom {
+    transform: rotateX(-180deg);
+}
+
+
+/* ****************************************
+   Launch Pad What's included
+   **************************************** */
+.lp-bundle-section {
+    background-color: var(--lp-bundle-section-bg);
+    padding: 40px 20px;
+}
+
+@keyframes slideUpFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.animate-on-scroll.visible {
+    animation: slideUpFadeIn 0.8s ease-out forwards;
+}
+
+.lp-bundle-title{
+    font-family: var(--sections-title-font);
+    font-size: clamp(1.25rem, 1.3rem + 1vw, 3rem);
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 40px;
+    color: var(--text-black);
+}
+
+.lp-bundle-content {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.lp-bundle-left {
+    flex: 1;
+    min-width: 280px;
+    max-width: 700px;
+}
+
+.lp-bundle-left h2 {
+    font-size: clamp(1.25rem, 1.3rem + 1vw, 1.75rem);
+    margin-bottom: 10px;
+    color: var(--lp-bundle-left-h2);
+}
+
+.lp-bundle-left p {
+    font-family: var(--body-default-font);
+    font-size: clamp(1.1rem, 1.3rem + 1vw, 1.4rem);
+    margin-bottom: 20px;
+    color: var(--lp-bundle-left-p);
+}
+
+.lp-icon-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.lp-icon-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    font-size: 1rem;
+    color: var(--text-black);
+    padding: 10px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.lp-icon-item:hover {
+    background-color: var(--tutor-section-bg);
+    transform: translateX(5px);
+    border-radius: 10px;
+}
+
+.lp-icon-item img {
+    width: 32px;
+    height: 32px;
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
+}
+
+.lp-icon-item:hover img {
+    transform: scale(1.1);
+}
+
+.lp-icon-item span {
+    font-family: var(--body-default-font);
+    font-size: clamp(1rem, 1.3rem + 1vw, 1.5rem);
+    line-height: 1.5;
+    color: var(--text-black);
+}
+
+.lp-icon-item span .highlight{
+    color: var(--secondary-accent);
+}
+
+.lp-bundle-right {
+    flex: 1;
+    min-width: 280px;
+    max-width: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.lp-video-placeholder {
+    width: 100%;
+    max-width: 100%;
+    aspect-ratio: 16 / 9;
+    background-color: var(--lp-video-placeholder);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--text-dark-gray);
+    font-size: 1.2rem;
+    border-radius: 12px;
+    text-align: center;
+    padding: 10px;
+}
+
+
+/* ****************************************
+   Launch Pad Day-by-Day Timeline
+   **************************************** */
+.paid-course {
+    padding: 60px 20px;
+    max-width: 900px;
+    margin: auto;
+}
+
+.paid-course h2, .lp-bundle h2 {
+    font-family: var(--sections-title-font);
+    font-size: clamp(1.25rem, 1.3rem + 1vw, 2rem);
+    margin-bottom: 2rem;
+}
+
+.lp-timeline {
+    border-left: 3px solid var(--lp-timeline);
+    padding-left: 20px;
+}
+    
+.lp-timeline-entry {
+    margin-bottom: 40px;
+    position: relative;
+}
+    
+.lp-timeline-entry::before {
+    content: "";
+    position: absolute;
+    left: -32px;
+    top: 4px;
+    background-color: var(--lp-timeline);
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    border: 3px solid var(--text-white);
+}
+
+.lp-timeline-entry h3 {
+    font-size: clamp(1.25rem, 1.3rem + 1vw, 1.75rem);
+    margin-bottom: 5px;
+}
+    
+.lp-timeline-entry p {
+    font-family: var(--body-default-font);
+    font-size: 1.5rem;
+    color: var(--text-dark-gray);
+}
+
 /* ****************************************
    Footer Section
    **************************************** */
@@ -1541,6 +1864,31 @@ footer {
         margin: 1rem;
     }
 
+    .lp header {
+        padding: 80px 10px 100px;
+    }
+    
+    .lp  h1 {
+        font-size: 2rem;
+    }
+
+    .lp-timeline {
+        padding-left: 15px;
+    }
+
+    .lp-countdown {
+        font-size: 1.2rem;
+    }
+
+    .lp-bundle-content {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .lp-bundle-title {
+        font-size: 1.8rem;
+    }
+
 }
 
 @media screen and (max-width: 568px) {
@@ -1736,7 +2084,6 @@ footer {
     .contact-intro .contact-h1 {
         font-size: clamp(1.7rem, 2vw, 2rem);
         margin-bottom: 0;
-    }
-
+}
 
 }
