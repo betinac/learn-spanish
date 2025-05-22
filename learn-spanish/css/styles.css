@@ -1388,7 +1388,7 @@ textarea.error {
     animation: slideUpFadeIn 0.8s ease-out forwards;
 }
 
-.lp-bundle-title{
+.lp-bundle-title, .ww-title, .offer-title {
     font-family: var(--sections-title-font);
     font-size: clamp(1.25rem, 1.3rem + 1vw, 3rem);
     text-align: center;
@@ -1425,13 +1425,13 @@ textarea.error {
     color: var(--lp-bundle-left-p);
 }
 
-.lp-icon-list {
+.lp-icon-list, .offer-icon-list {
     display: flex;
     flex-direction: column;
     gap: 1rem;
 }
 
-.lp-icon-item {
+.lp-icon-item, .offer-icon-item {
     display: flex;
     align-items: flex-start;
     gap: 12px;
@@ -1442,24 +1442,24 @@ textarea.error {
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-.lp-icon-item:hover {
+.lp-icon-item:hover, .offer-icon-item:hover {
     background-color: var(--tutor-section-bg);
     transform: translateX(5px);
     border-radius: 10px;
 }
 
-.lp-icon-item img {
+.lp-icon-item img, .offer-icon-item img {
     width: 32px;
     height: 32px;
     flex-shrink: 0;
     transition: transform 0.3s ease;
 }
 
-.lp-icon-item:hover img {
+.lp-icon-item:hover img, .offer-icon-item:hover img {
     transform: scale(1.1);
 }
 
-.lp-icon-item span {
+.lp-icon-item span, .offer-icon-item span {
     font-family: var(--body-default-font);
     font-size: clamp(1rem, 1.3rem + 1vw, 1.5rem);
     line-height: 1.5;
@@ -1539,8 +1539,146 @@ textarea.error {
     
 .lp-timeline-entry p {
     font-family: var(--body-default-font);
-    font-size: 1.5rem;
+    font-size: clamp(1.25rem, 1.3rem + 1vw, 1.5rem);
     color: var(--text-dark-gray);
+}
+
+/* ****************************************
+   Launch Pad Why this course works
+   **************************************** */
+.why-it-works-section {
+    background-color: var(--trial-section-bg);
+    padding: 60px 20px;
+}
+
+.ww-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.ww-left img {
+    max-width: 300px;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.ww-right {
+    flex: 1;
+    min-width: 280px;
+}
+
+.ww-right h2, .offer-left h2 {
+    font-size: clamp(1.25rem, 1.3rem + 1vw, 1.75rem);
+    margin-bottom: 20px;
+}
+
+.ww-icon-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.ww-icon-item {
+    display: flex;
+    align-items: flex-start;
+    font-size: clamp(1.25rem, 1.3rem + 1vw, 1.5rem);
+    line-height: 1.5;
+    gap: 20px;
+    color: var(--text-black);
+}
+
+.ww-icon-item i {
+    margin-top: 4px;
+}
+
+.more-padding {
+    margin-top: 2rem;
+}
+
+/* ****************************************
+   Launch Pad Offer
+   **************************************** */
+.offer-section {
+    background-color: var(--lp-bundle-section-bg);
+    padding: 60px 20px;
+}
+
+.offer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+}
+
+.offer-left, .offer-right {
+    flex: 1 1 400px;
+    padding: 10px;
+}
+
+.offer-left h3 {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: var(--text-dark-gray);
+}
+
+.thumbex {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    overflow: hidden;
+    outline: 2px solid var(--cta-text);
+    outline-offset: -15px;
+    background-color: var(--text-terms);
+    box-shadow: 5px 10px 40px 5px rgba(0,0,0,0.5);
+    margin: auto;
+}
+
+.thumbnail {
+    overflow: hidden;
+    width: 100%;
+    height: auto;
+    position: relative;
+    opacity: 0.88;
+    backface-visibility: hidden;
+    transition: all 0.4s ease-out;
+}
+
+.thumbnail img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    backface-visibility: hidden;
+}
+
+.thumbnail span{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0,0,0,0.7);
+    padding: 12px 20px;
+    text-align: center;
+    font-size: 1.2rem;
+    color: var(--text-white);
+    font-weight: 300;
+    transition: all 0.3s ease-out;
+}
+
+.thumbnail:hover{
+    transform: scale(1.05);
+    opacity: 1;       
+}
+
+.thumbnail:hover span{
+    opacity: 0;
 }
 
 /* ****************************************
@@ -1887,6 +2025,46 @@ footer {
 
     .lp-bundle-title {
         font-size: 1.8rem;
+    }
+
+    .ww-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .ww-left img {
+        max-width: 70%;
+    }
+
+    .ww-right h2 {
+        font-size: 1.5rem;
+    }
+
+    .ww-icon-item {
+        justify-content: center;
+    }
+
+    .offer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .offer-left, .offer-right {
+        flex: 1 1 100%;
+        text-align: center;
+    }
+
+    .offer-left h2 {
+        font-size: 1.5rem;
+    }
+
+    .offer-left h3 {
+        font-size: 1rem;
+    }
+
+    .thumbnail span {
+        font-size: 1rem;
+        padding: 10px;
     }
 
 }
