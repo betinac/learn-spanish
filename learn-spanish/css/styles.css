@@ -551,6 +551,7 @@ h1.intro-title::after {
     padding: 4rem 2rem;
     color: var(--text-black);
     background-color: var(--accent);
+    text-align: center;
 }
 
 .who-section h2.who-title {
@@ -578,7 +579,6 @@ h1.intro-title::after {
 
 .text-section h2 {
     font-size: 2.5rem;
-    font-weight: bold;
     margin-bottom: 1rem;
     color: var(--text-black);
 }
@@ -680,6 +680,7 @@ h1.intro-title::after {
     font-size: 1.5rem;
     color: var(--benefits-title);
     margin-bottom: 0.5rem;
+    font-weight: 400;
 }
 
 .benefit-card p {
@@ -751,7 +752,6 @@ h1.intro-title::after {
 
 .step-title {
     font-size: 2rem;
-    font-weight: bold;
     margin-bottom: 10px;
 }
 
@@ -793,7 +793,6 @@ h1.intro-title::after {
 
 .pricing-title {
     font-size: 2.5rem;
-    font-weight: bold;
     margin-bottom: 1.5rem;
 }
 
@@ -1203,7 +1202,6 @@ textarea.error {
 
 .kickstart-title {
     font-size: 2rem;
-    font-weight: bold;
     margin-bottom: 1.5rem;
 }
 
@@ -1767,19 +1765,20 @@ footer {
     .content-wrapper {
         flex-direction: column-reverse;
         padding-left: 0;
+        text-align: center;
     }
 
-    .text-section {
+    .text-section, .image-section {
         flex: 0 0 100%;
         width: 100%;
     }
 
-    .image-section {
-        width: 40%;
-    }
-
     .text-section {
         padding: 1.5rem;
+    }
+
+    .image-section img {
+        width: 100%;
     }
 
     .text-section h2 {
@@ -1862,7 +1861,7 @@ footer {
     }
 }
 
-@media (max-width: 920px) {
+@media screen and (max-width: 920px) {
 
     .tutor-text p,
     .trial-description,
@@ -1966,16 +1965,27 @@ footer {
         margin: 0 auto;
     }
 
+    .tutor-title {
+        padding: 0 20px;
+    }
+
     .tutor-image img {
-        width: 240px;
-        height: 240px;
+        width: 100%;
     }
 
     .tutor-text p,
     .trial-description,
-    .trial-benefits li,
     .trial-next-step,
-    .intro-text p {
+    .trial-benefits li,
+    .trial-regular-price,
+    .trial-offer strong,
+    .intro-text p,
+    .text-section p,
+    .text-section li,
+    .benefit-card p,
+    .step-right .step-text,
+    .kickstart-content p,
+    .kickstart-content .trial-benefits li {
         font-size: clamp(1.4rem, 2vw, 2rem);
     }
 
@@ -2008,21 +2018,37 @@ footer {
         align-self: center;
     }
 
+    .text-section, .image-section {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+   
+    .image-section img {
+        width: 80%;
+    }
+
     .kickstart-container {
         flex-direction: column;
         text-align: center;
     }
 
-    .kickstart-image {
-        flex: 1;
-        max-width: 30%;
-        text-align: center;
+    .kickstart-content, .kickstart-image {
+        flex: 0 0 100%;
+        max-width: 100%;
     }
+
+    .kickstart-content {
+        margin-bottom: 20px;
+    }
+
+    .kickstart-image img {
+        width: 100%;
+    }
+
 
     .trial-benefits li::before {
         position: relative;
         left: -8px;
-        font-size: 1.2rem;
     }
 
     .pricing-container {
@@ -2031,7 +2057,7 @@ footer {
 
     .modal-content {
         max-width: 600px;
-        width: 100%;
+        width: 90%;
     }
 
     .cf-form-row {
@@ -2039,6 +2065,7 @@ footer {
     }
 
     .contact-intro .contact-h1 {
+        margin-top: 1rem;
         font-size: clamp(1.6rem, 2vw, 2rem);
     }
 
@@ -2198,17 +2225,28 @@ footer {
 
 @media screen and (max-width: 480px) {
     .hero-content h2.hero-subtitle {
+        font-size: clamp(1.5rem, 2.5rem + 2vw, 6rem);
         line-height: 4.5rem;
     }
 
-    .hero-text {
-        font-size: 2rem;
+    .hero-content .hero-text {
+        font-size: 1.2rem;
     }
 
-    .tutor-title,
-    .trial-title,
-    .steps-title {
-        font-size: 2.3rem;
+    .hero-cta .cta-get-in-touch {
+        margin: auto;
+        margin-top: 2rem;
+    }
+
+    h2.tutor-title,
+    h2.trial-title,
+    h2.steps-title,
+    h1.intro-title,
+    h2.who-title,
+    h2.benefits-title,
+    h2.pricing-title,
+    h2.kickstart-title {
+        font-size: 2rem;
     }
 
     .tutor-text {
@@ -2217,21 +2255,27 @@ footer {
     }
 
     .tutor-image img {
-        width: 200px;
-        height: 200px;
+        width: 100%;
     }
 
     .tutor-text p,
     .trial-description,
     .trial-next-step,
+    .trial-benefits li,
     .trial-regular-price,
-    .intro-text p {
+    .trial-offer strong,
+    .intro-text p,
+    .text-section p,
+    .text-section li,
+    .benefit-card p,
+    .step-right .step-text,
+    .kickstart-content p,
+    .kickstart-content .trial-benefits li  {
         font-size: clamp(1.2rem, 2vw, 2rem);
     }
 
     .trial-image img {
-        width: 200px;
-        height: 200px;
+        width: 80%;
     }
 
     .trial-benefits {
@@ -2242,22 +2286,41 @@ footer {
         font-size: clamp(1.3rem, 2vw, 2rem);
     }
 
-    .intro-text .intro-h1 {
-        font-size: clamp(1.7rem, 5vw, 2rem);
+    .text-section, .image-section {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+   
+    .image-section img {
+        width: 80%;
+    }
+ 
+    .kickstart-content, .kickstart-image {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .kickstart-content {
+        margin-bottom: 20px;
+    }
+
+    .kickstart-image img {
+        width: 80%;
+    }
+
+    .contact-intro {
+        margin-bottom: 0.8rem;
     }
 
     .contact-intro .contact-h1 {
-        font-size: clamp(1.7rem, 2vw, 2rem);
+        font-size: clamp(1.5rem, 2vw, 2rem);
         margin-bottom: 0;
     }
 
-    .contact-h1 {
-        font-size: 1.2rem;
-    }
-
+    .contact-form label,
     .contact-form input,
     .contact-form textarea {
-        font-size: 1rem;
+        font-size: 0.9rem;
     }
 
     .modal {
@@ -2267,7 +2330,7 @@ footer {
 
     .cf-form-row .cta-get-in-touch {
         width: 60%;
-        margin-top: 0.5rem;
+        margin-top: 0.1rem;
     }
 }
 
@@ -2329,6 +2392,82 @@ footer {
     .contact-intro .contact-h1 {
         font-size: clamp(1.7rem, 2vw, 2rem);
         margin-bottom: 0;
+    }
 }
 
+@media screen and (orientation: landscape) and (max-width: 1100px) and (min-width: 768px) {
+    .hero-content h2.hero-subtitle {
+        font-size: clamp(1.5rem, 3rem + 2vw, 6rem);
+        line-height: 4.5rem;
+    }
+    
+    .hero-content .hero-text {
+        font-size: 1.8rem;
+    }
+
+    .tutor-image img {
+        width: 300px;
+        height: 300px;
+    }
+    
+    .trial-image img {
+        width: 80%;
+    }
+
+    .text-section, .image-section {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .image-section img {
+        width: 40%;
+    }
+    .kickstart-image img {
+        width: 80%;
+    }
+
+}
+
+@media screen and (orientation: landscape) and (max-height: 430px) {
+    .nav-spacer {
+        height: 80px;
+    }
+
+    .hero-content h1.hero-title {
+        font-size: 2rem;
+        line-height: 2.5rem;
+    }
+
+    .hero-content h2.hero-subtitle {
+        font-size: 2.5rem;
+        line-height: 3.5rem;
+    }
+
+    .hero-content .hero-text {
+        font-size: 1.5rem;
+        line-height: 1rem;
+    }
+
+    .hero-cta .cta-get-in-touch {
+        margin: auto;
+        margin-top: 1rem;
+    }
+
+    .tutor-image img {
+        width: 40%;
+        height: 40%;
+    }
+
+    .text-section, .image-section {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+   
+    .image-section img {
+        width: 40%;
+    }
+
+    .kickstart-image img {
+        width: 100%;
+    }
 }
