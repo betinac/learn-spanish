@@ -1287,14 +1287,21 @@ textarea.error {
     padding: 10px 3px 3px 10px;
 }
 
-.lp-subheadline {
-    margin: 10px 0 30px 0px;
+.lp-subheadline, .lp-subheadline-2 {
     font-family: var(--body-default-font);
     font-size: clamp(1rem, 1.1rem + 1.5vw, 2rem);
     color: var(--text-white-pale);
 }
 
-.lp-subheadline .highlight {
+.lp-subheadline {
+    margin: 30px 0 30px 0px;
+}
+
+.lp-subheadline-2 {
+    margin-bottom: 20px;    
+}
+
+.lp-subheadline .highlight, .lp-subheadline-2 .highlight {
     color: var(--accent);
     font-weight: bold;
 }
@@ -1761,7 +1768,7 @@ footer {
 /* ****************************************
    Responsive configuration
    **************************************** */
-@media (max-width: 1180px) {
+@media screen and (max-width: 1180px) {
     .content-wrapper {
         flex-direction: column-reverse;
         padding-left: 0;
@@ -1796,7 +1803,7 @@ footer {
     }
 }
 
-@media (max-width: 990px) {
+@media screen and (max-width: 990px) {
     .tutor-text {
         max-width: 90%;
         text-align: center;
@@ -1862,7 +1869,6 @@ footer {
 }
 
 @media screen and (max-width: 920px) {
-
     .tutor-text p,
     .trial-description,
     .trial-next-step {
@@ -1878,7 +1884,27 @@ footer {
         margin-bottom: 1rem;
         text-align: center;
     }
+    
+    .lp-header {
+        padding: 60px 20px;
+        text-align: center;
+    }
 
+    .lp-overlay {
+        margin-top: 2rem;
+        padding: 30px 20px;
+        width: 100%;
+        max-width: 95vw;
+    }
+
+    .lp-overlay h1, .lp-overlay h2 {
+        font-size: clamp(1.5rem, 2rem + 2vw, 4rem);
+        line-height: normal;
+    }
+
+    .lp-subheadline {
+        font-size: clamp(1rem, 1.5vw + 1rem, 1.5rem);
+    }
 }
 
 @media screen and (max-width: 880px) {
