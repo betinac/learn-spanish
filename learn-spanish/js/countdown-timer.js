@@ -1,4 +1,4 @@
-const newDeadline = new Date("May 30, 2025 23:59:59").getTime();
+const newDeadline = new Date("July 31, 2025 23:59:59").getTime();
 
 function startCountdownTo(newDeadline) {
     const daysEl = document.getElementById("days");
@@ -37,13 +37,11 @@ function updateCountdown() {
 
     if (distance <= 0) {
         clearInterval(timerInterval);
-        // Optional: Display a message or hide the timer
     }
 }
 
-updateCountdown(); // Initial call
+updateCountdown();
     const timerInterval = setInterval(updateCountdown, 1000);
 }
 
-// Start the countdown
 startCountdownTo(newDeadline);
