@@ -50,7 +50,6 @@
     --lp-highlight: #FFD500;
     --lp-bundle-left-h2: #444444;
     --lp-bundle-left-p: #666666;
-    --lp-video-placeholder: #DDDDDD;
 }
 
 /* ****************************************
@@ -1506,25 +1505,10 @@ textarea.error {
 .lp-bundle-right {
     flex: 1;
     min-width: 280px;
-    max-width: 500px;
+    max-width: 600px;
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.lp-video-placeholder {
-    width: 100%;
-    max-width: 100%;
-    aspect-ratio: 16 / 9;
-    background-color: var(--lp-video-placeholder);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: var(--text-dark-gray);
-    font-size: 1.2rem;
-    border-radius: 12px;
-    text-align: center;
-    padding: 10px;
 }
 
 /* ****************************************
@@ -1740,22 +1724,14 @@ textarea.error {
     max-width: 600px;
 }
 
-.video-wrapper {
+.video-wrapper,
+.lp-bundle-right .video-wrapper {
     position: relative;
     padding-bottom: 56.25%;
     height: 0;
     overflow: hidden;
     border-radius: 16px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-}
-
-.video-wrapper iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border: none;
 }
 
 .mt-title {
@@ -2234,6 +2210,11 @@ footer {
     .paid-course {
         padding: 60px 60px;
     }
+
+    .lp-bundle-right {
+        max-width: 100%;
+        margin: 0 auto;
+    }
 }
 
 @media screen and (max-width: 568px) {
@@ -2331,7 +2312,8 @@ footer {
     }
 
     .mt-left,
-    .mt-right {
+    .mt-right,
+    .lp-bundle-right {
         flex: 1 1 250px;
         max-width: 600px;
     }
@@ -2656,5 +2638,27 @@ footer {
     .lp-subheadline,
     .lp-subheadline-2 {
         font-size: 1.5rem;
+    }
+
+    .lp-bundle-content {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .lp-bundle-left,
+    .lp-bundle-right {
+        max-width: 100%;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .lp-bundle-left .lp-icon-list {
+        justify-content: center;
+    }
+
+    .lp-bundle-right .video-wrapper {
+        width: 100%;
+        max-width: 100%;
     }
 }
