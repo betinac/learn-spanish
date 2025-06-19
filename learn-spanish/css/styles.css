@@ -1,37 +1,42 @@
 :root {
     --primary-bg: #E2E8F4;
-    --secondary-bg: #f9f4ee;
+    --secondary-bg: #F9F4EE;
     --nav-bg: #FAF9F6;
-    --benefits-bg: #f7e1c1;
-    --pricing-bg: #f8f9fa;
-    --best-value-bg: #ffeeba;
-    --trial-section-bg: #f8d4a8;
+    --benefits-bg: #F7E1C1;
+    --pricing-bg: #F8F9FA;
+    --best-value-bg: #FFEEBA;
+    --trial-section-bg: #F8D4A8;
+    --tutor-section-bg: #FdF6EC;
+    --lp-bundle-section-bg: #F3EDE7;
+    --countdown-bg: #333333;
     --accent: #EE9B00;
     --secondary-accent: #CA6702;
     --tertiary-accent: #80A4ED;
     --fourth-accent: #3447AA;
-    --fifth-accent: #f2E0E6;
+    --fifth-accent: #F2E0E6;
     --text-body: #222222;
-    --text-white: #fcf9f1;
-    --text-white-pale: #eae8e8;
+    --text-white: #FCF9F1;
+    --text-white-pale: #EAE8E8;
     --text-black: #333333;
     --text-gray: #414040;
     --text-light-gray: #888888;
-    --text-terms: #007bff;
-    --best-value-border: #ffca2c;
-    --best-value-border-hover: #e0a800;
+    --text-dark-gray: #555555;
+    --text-terms: #007BFF;
+    --best-value-border: #FFCA2C;
+    --best-value-border-hover: #E0A800;
     --hero-title-font: 'Lexend', Arial, sans-serif;
     --hero-subtitle-font: 'Gochi Hand', Arial, sans-serif;
     --body-default-font: 'Roboto', Arial, sans-serif;
     --sections-title-font: 'Lexend', Arial, sans-serif;
+    --countdown-font: 'Courier New', Courier, monospace;
     --font-default-size: 16px;
     --h1-title: #373535;
     --benefits-heading: #373535;
-    --benefits-icon: #f5833c;
+    --benefits-icon: #F5833C;
     --benefits-title: #CA6702;
-    --benefits-info: #4d4e51;
-    --steps-title: #d35400;
-    --steps-number: #8a3903;
+    --benefits-info: #4D4E51;
+    --steps-title: #D35400;
+    --steps-number: #8A3903;
     --cform-error: #9D0000;
     --cform-confirmation: #065906;
     --nav-bg: #FAF9F6;
@@ -40,6 +45,11 @@
     --cta-text: #FFFFFF;
     --cta-bg: #FC815F;
     --cta-gradient-accent: #E9A112;
+    --lp-timeline: #FF5722;
+    --lp-timeline-dark: #E64A19;
+    --lp-highlight: #FFD500;
+    --lp-bundle-left-h2: #444444;
+    --lp-bundle-left-p: #666666;
 }
 
 /* ****************************************
@@ -130,7 +140,7 @@ strong {
 
 .nav-active {
     font-weight: bold;
-} 
+}
 
 /* ****************************************
    Hamburger Menu for Mobile
@@ -186,6 +196,13 @@ strong {
     white-space: nowrap;
 }
 
+.lp-overlay .cta-button {
+    white-space: normal;
+    word-break: break-word;
+    text-align: center;
+    max-width: 100%;
+}
+
 .cta-button i {
     pointer-events: none;
 }
@@ -199,6 +216,7 @@ strong {
     white-space: nowrap;
     margin: auto;
     margin-top: 3rem;
+    background-color: var(--lp-timeline);
 }
 
 .nav-links .cta-button {
@@ -266,7 +284,7 @@ strong {
    Meet your Tutor Section
    **************************************** */
 .tutor-section {
-    background-color: #fdf6ec;
+    background-color: var(--tutor-section-bg);
     padding: 50px 20px;
     text-align: center;
 }
@@ -327,7 +345,7 @@ h2.kickstart-title {
 }
 
 .highlight {
-    color: #d35400;
+    color: var(--steps-title);
     font-weight: bold;
 }
 
@@ -385,7 +403,7 @@ h2.trial-title {
 .trial-description,
 .trial-next-step {
     font-size: 1.5rem;
-    color: #555;
+    color: var(--text-dark-gray);
     margin-bottom: 20px;
 }
 
@@ -539,6 +557,7 @@ h1.intro-title::after {
     padding: 4rem 2rem;
     color: var(--text-black);
     background-color: var(--accent);
+    text-align: center;
 }
 
 .who-section h2.who-title {
@@ -566,7 +585,6 @@ h1.intro-title::after {
 
 .text-section h2 {
     font-size: 2.5rem;
-    font-weight: bold;
     margin-bottom: 1rem;
     color: var(--text-black);
 }
@@ -668,6 +686,7 @@ h1.intro-title::after {
     font-size: 1.5rem;
     color: var(--benefits-title);
     margin-bottom: 0.5rem;
+    font-weight: 400;
 }
 
 .benefit-card p {
@@ -739,7 +758,6 @@ h1.intro-title::after {
 
 .step-title {
     font-size: 2rem;
-    font-weight: bold;
     margin-bottom: 10px;
 }
 
@@ -781,7 +799,6 @@ h1.intro-title::after {
 
 .pricing-title {
     font-size: 2.5rem;
-    font-weight: bold;
     margin-bottom: 1.5rem;
 }
 
@@ -1191,7 +1208,6 @@ textarea.error {
 
 .kickstart-title {
     font-size: 2rem;
-    font-weight: bold;
     margin-bottom: 1.5rem;
 }
 
@@ -1220,6 +1236,517 @@ textarea.error {
     font-size: 1.2rem;
 }
 
+/* **********************************************
+   Paid 6-day Spanish Launch Pad course Section
+   ********************************************** */
+.lp-page {
+    background-color: var(--tutor-section-bg);
+    width: 100%;
+}
+
+.lp-header {
+    background: url(../assets/background/cataratas-iguazu.jpg) center/cover no-repeat;
+    color: var(--tutor-section-bg);
+    text-align: center;
+    padding: 100px;
+    position: relative;
+}
+
+.lp-overlay {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 40px 40px 10px;
+    border-radius: 12px;
+    display: inline-block;
+}
+
+.lp-overlay h1,
+.lp-overlay h2 {
+    font-family: var(--hero-subtitle-font);
+    font-size: clamp(1.5rem, 3.3rem + 1vw, 6rem);
+    font-style: normal;
+    line-height: 6rem;
+    color: var(--text-white);
+    margin-bottom: 1rem;
+}
+
+.lp-highlight,
+.lp-highlight-text {
+    position: relative;
+}
+
+.lp-highlight {
+    display: inline-block;
+    color: var(--steps-title);
+}
+
+.lp-highlight:before {
+    content: " ";
+    display: block;
+    height: 75%;
+    width: 100%;
+    margin-left: -5px;
+    margin-right: -5px;
+    position: absolute;
+    background: var(--lp-highlight);
+    transform: rotate(2deg);
+    top: -1px;
+    left: -1px;
+    border-radius: 20% 25% 20% 24%;
+    padding: 10px 3px 3px 10px;
+}
+
+.lp-subheadline,
+.lp-subheadline-2 {
+    font-family: var(--body-default-font);
+    font-size: clamp(1rem, 1.1rem + 1.5vw, 2rem);
+    color: var(--text-white-pale);
+}
+
+.lp-subheadline {
+    margin: 30px 0 30px 0px;
+}
+
+.lp-subheadline-2 {
+    margin-bottom: 20px;
+}
+
+.lp-subheadline .highlight,
+.lp-subheadline-2 .highlight {
+    color: var(--accent);
+    font-weight: bold;
+}
+
+.lp-cta-button {
+    background-color: var(--lp-timeline);
+    color: var(--text-white);
+}
+
+.lp-cta-button:hover {
+    background-color: var(--lp-timeline-dark);
+}
+
+/* ****************************************
+   Launch Pad Countdown
+   **************************************** */
+.flip-clock {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    font-family: var(--countdown-font)
+}
+
+.flip-clock p {
+    font-size: clamp(1.25rem, 1.3rem + 1vw, 2rem);
+}
+
+.flip-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 20px 10px;
+}
+
+.flip-unit {
+    background: var(--countdown-bg);
+    color: var(--text-white);
+    font-size: 2.5rem;
+    width: 80px;
+    height: 80px;
+    perspective: 1000px;
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+}
+
+.flip-unit span {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    line-height: 80px;
+    display: block;
+    backface-visibility: hidden;
+    transition: transform 0.5s;
+}
+
+.flip-unit .top {
+    z-index: 2;
+    transform: rotateX(0deg);
+}
+
+.flip-unit .bottom {
+    transform: rotateX(-180deg);
+}
+
+
+/* ****************************************
+   Launch Pad What's included
+   **************************************** */
+.lp-bundle-section {
+    background-color: var(--lp-bundle-section-bg);
+    padding: 40px 20px;
+}
+
+@keyframes slideUpFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.animate-on-scroll.visible {
+    animation: slideUpFadeIn 0.8s ease-out forwards;
+}
+
+.lp-bundle-title,
+.ww-title,
+.offer-title {
+    font-family: var(--sections-title-font);
+    font-size: clamp(1.25rem, 1.3rem + 1vw, 3rem);
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 40px;
+    color: var(--text-black);
+}
+
+.lp-bundle-content {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.lp-bundle-left {
+    flex: 1;
+    min-width: 280px;
+    max-width: 700px;
+}
+
+.lp-bundle-left h2 {
+    font-size: clamp(1.25rem, 1.3rem + 1vw, 1.75rem);
+    margin-bottom: 10px;
+    color: var(--lp-bundle-left-h2);
+}
+
+.lp-bundle-left p {
+    font-family: var(--body-default-font);
+    font-size: clamp(1.1rem, 1.3rem + 1vw, 1.4rem);
+    margin-bottom: 20px;
+    color: var(--lp-bundle-left-p);
+}
+
+.lp-icon-list,
+.offer-icon-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.lp-icon-item,
+.offer-icon-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    font-size: 1rem;
+    color: var(--text-black);
+    padding: 10px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.lp-icon-item:hover,
+.offer-icon-item:hover {
+    background-color: var(--tutor-section-bg);
+    transform: translateX(5px);
+    border-radius: 10px;
+}
+
+.lp-icon-item img,
+.offer-icon-item img {
+    width: 32px;
+    height: 32px;
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
+}
+
+.lp-icon-item:hover img,
+.offer-icon-item:hover img {
+    transform: scale(1.1);
+}
+
+.lp-icon-item span,
+.offer-icon-item span {
+    font-family: var(--body-default-font);
+    font-size: clamp(1rem, 1.3rem + 1vw, 1.5rem);
+    line-height: 1.5;
+    color: var(--text-black);
+}
+
+.lp-icon-item span .highlight {
+    color: var(--secondary-accent);
+}
+
+.lp-bundle-right {
+    flex: 1;
+    min-width: 280px;
+    max-width: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ****************************************
+   Launch Pad Day-by-Day Timeline
+   **************************************** */
+.paid-course {
+    padding: 60px 20px;
+    max-width: 900px;
+    margin: auto;
+}
+
+.paid-course h2,
+.lp-bundle h2 {
+    font-family: var(--sections-title-font);
+    font-size: clamp(1.25rem, 1.3rem + 1vw, 2rem);
+    margin-bottom: 2rem;
+}
+
+.lp-timeline {
+    border-left: 3px solid var(--lp-timeline);
+    padding-left: 20px;
+}
+
+.lp-timeline-entry {
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.lp-timeline-entry::before {
+    content: "";
+    position: absolute;
+    left: -32px;
+    top: 4px;
+    background-color: var(--lp-timeline);
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    border: 3px solid var(--text-white);
+}
+
+.lp-timeline-entry h3 {
+    font-size: clamp(1.25rem, 1.3rem + 1vw, 1.75rem);
+    margin-bottom: 5px;
+}
+
+.lp-timeline-entry p {
+    font-family: var(--body-default-font);
+    font-size: clamp(1.25rem, 1.3rem + 1vw, 1.5rem);
+    color: var(--text-dark-gray);
+}
+
+/* ****************************************
+   Launch Pad Why this course works
+   **************************************** */
+.why-it-works-section {
+    background-color: var(--trial-section-bg);
+    padding: 60px 20px;
+}
+
+.ww-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.ww-left img {
+    max-width: 300px;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.ww-right {
+    flex: 1;
+    min-width: 280px;
+}
+
+.ww-right h2,
+.offer-left h2 {
+    font-size: clamp(1.25rem, 1.3rem + 1vw, 1.75rem);
+    margin-bottom: 20px;
+}
+
+.ww-icon-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.ww-icon-item {
+    display: flex;
+    align-items: flex-start;
+    font-size: clamp(1.25rem, 1.3rem + 1vw, 1.5rem);
+    line-height: 1.5;
+    gap: 20px;
+    color: var(--text-black);
+}
+
+.ww-icon-item i {
+    margin-top: 4px;
+}
+
+.more-padding {
+    margin-top: 2rem;
+}
+
+/* ****************************************
+   Launch Pad Offer
+   **************************************** */
+.offer-section {
+    background-color: var(--lp-bundle-section-bg);
+    padding: 60px 20px;
+}
+
+.offer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+}
+
+.offer-left,
+.offer-right {
+    flex: 1 1 400px;
+    padding: 10px;
+}
+
+.offer-left h3 {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: var(--text-dark-gray);
+}
+
+.thumbex {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    overflow: hidden;
+    outline: 2px solid var(--cta-text);
+    outline-offset: -15px;
+    background-color: var(--text-terms);
+    box-shadow: 5px 10px 40px 5px rgba(0, 0, 0, 0.5);
+    margin: auto;
+}
+
+.thumbnail {
+    overflow: hidden;
+    width: 100%;
+    height: auto;
+    position: relative;
+    opacity: 0.88;
+    backface-visibility: hidden;
+    transition: all 0.4s ease-out;
+}
+
+.thumbnail img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    backface-visibility: hidden;
+}
+
+.thumbnail span {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 12px 20px;
+    text-align: center;
+    font-size: 1.2rem;
+    color: var(--text-white);
+    font-weight: 300;
+    transition: all 0.3s ease-out;
+}
+
+.thumbnail:hover {
+    transform: scale(1.05);
+    opacity: 1;
+}
+
+.thumbnail:hover span {
+    opacity: 0;
+}
+
+/* ****************************************
+   Launch Pad Meet Teacher
+   **************************************** */
+.meet-teacher-section {
+    background-color: #fdf6ec;
+    padding: 60px 20px;
+}
+
+.mt-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.mt-left,
+.mt-right {
+    flex: 1 1 400px;
+    max-width: 600px;
+}
+
+.video-wrapper,
+.lp-bundle-right .video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.mt-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #3e3e3e;
+    text-align: left;
+}
+
+.mt-bio {
+    font-size: 1.5rem;
+    line-height: 1.6;
+    color: #4a4a4a;
+}
+
 /* ****************************************
    Footer Section
    **************************************** */
@@ -1230,28 +1757,28 @@ footer {
     color: var(--text-black);
 }
 
-
-
 /* ****************************************
    Responsive configuration
    **************************************** */
-@media (max-width: 1180px) {
+@media screen and (max-width: 1180px) {
     .content-wrapper {
         flex-direction: column-reverse;
         padding-left: 0;
+        text-align: center;
     }
 
-    .text-section {
+    .text-section,
+    .image-section {
         flex: 0 0 100%;
         width: 100%;
     }
 
-    .image-section {
-        width: 40%;
-    }
-
     .text-section {
         padding: 1.5rem;
+    }
+
+    .image-section img {
+        width: 100%;
     }
 
     .text-section h2 {
@@ -1269,7 +1796,7 @@ footer {
     }
 }
 
-@media (max-width: 990px) {
+@media screen and (max-width: 990px) {
     .tutor-text {
         max-width: 90%;
         text-align: center;
@@ -1334,7 +1861,7 @@ footer {
     }
 }
 
-@media (max-width: 920px) {
+@media screen and (max-width: 920px) {
 
     .tutor-text p,
     .trial-description,
@@ -1352,6 +1879,28 @@ footer {
         text-align: center;
     }
 
+    .lp-header {
+        padding: 60px 20px;
+        text-align: center;
+    }
+
+    .lp-overlay {
+        margin-top: 2rem;
+        padding: 30px 20px;
+        width: 100%;
+        max-width: 95vw;
+    }
+
+    .lp-overlay h1,
+    .lp-overlay h2 {
+        font-size: clamp(1.5rem, 2rem + 2vw, 4rem);
+        line-height: normal;
+    }
+
+    .lp-subheadline,
+    .lp-subheadline-2 {
+        font-size: clamp(1rem, 1.5vw + 1rem, 1.5rem);
+    }
 }
 
 @media screen and (max-width: 880px) {
@@ -1421,8 +1970,6 @@ footer {
     .kickstart-content .trial-benefits li {
         font-size: clamp(1.3rem, 3.5vw, 1.4rem);
     }
-
-
 }
 
 @media screen and (max-width: 768px) {
@@ -1438,16 +1985,32 @@ footer {
         margin: 0 auto;
     }
 
+    .flip-clock {
+        gap: 10px;
+        padding: 30px 10px;
+    }
+
+    .tutor-title {
+        padding: 0 20px;
+    }
+
     .tutor-image img {
-        width: 240px;
-        height: 240px;
+        width: 100%;
     }
 
     .tutor-text p,
     .trial-description,
-    .trial-benefits li,
     .trial-next-step,
-    .intro-text p {
+    .trial-benefits li,
+    .trial-regular-price,
+    .trial-offer strong,
+    .intro-text p,
+    .text-section p,
+    .text-section li,
+    .benefit-card p,
+    .step-right .step-text,
+    .kickstart-content p,
+    .kickstart-content .trial-benefits li {
         font-size: clamp(1.4rem, 2vw, 2rem);
     }
 
@@ -1480,21 +2043,38 @@ footer {
         align-self: center;
     }
 
+    .text-section,
+    .image-section {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .image-section img {
+        width: 80%;
+    }
+
     .kickstart-container {
         flex-direction: column;
         text-align: center;
     }
 
+    .kickstart-content,
     .kickstart-image {
-        flex: 1;
-        max-width: 30%;
-        text-align: center;
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .kickstart-content {
+        margin-bottom: 20px;
+    }
+
+    .kickstart-image img {
+        width: 100%;
     }
 
     .trial-benefits li::before {
         position: relative;
         left: -8px;
-        font-size: 1.2rem;
     }
 
     .pricing-container {
@@ -1503,7 +2083,7 @@ footer {
 
     .modal-content {
         max-width: 600px;
-        width: 100%;
+        width: 90%;
     }
 
     .cf-form-row {
@@ -1511,6 +2091,7 @@ footer {
     }
 
     .contact-intro .contact-h1 {
+        margin-top: 1rem;
         font-size: clamp(1.6rem, 2vw, 2rem);
     }
 
@@ -1541,6 +2122,99 @@ footer {
         margin: 1rem;
     }
 
+    .lp header {
+        padding: 80px 10px 100px;
+    }
+
+    .lp h1 {
+        font-size: 2rem;
+    }
+
+    .lp-timeline {
+        padding-left: 20px;
+    }
+
+    .lp-countdown {
+        font-size: 1.2rem;
+    }
+
+    .lp-bundle-content {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .lp-bundle-title {
+        font-size: 1.8rem;
+    }
+
+    .ww-content {
+        flex-direction: column;
+        text-align: left;
+    }
+
+    .ww-left {
+        text-align: center;
+    }
+
+    .ww-left img {
+        max-width: 70%;
+    }
+
+    .ww-right {
+        padding-left: 30px;
+    }
+
+    .ww-right h2 {
+        font-size: 1.5rem;
+    }
+
+    .offer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .offer-left,
+    .offer-right {
+        flex: 1 1 100%;
+        text-align: center;
+    }
+
+    .offer-left h2 {
+        font-size: 1.5rem;
+    }
+
+    .offer-left h3 {
+        font-size: 1rem;
+    }
+
+    .offer-icon-list .offer-icon-item {
+        text-align: left;
+    }
+
+    .thumbnail span {
+        font-size: 1rem;
+        padding: 10px;
+    }
+
+    .mt-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+        margin: 10px;
+    }
+
+    .mt-title {
+        text-align: center;
+    }
+
+    .paid-course {
+        padding: 60px 60px;
+    }
+
+    .lp-bundle-right {
+        max-width: 100%;
+        margin: 0 auto;
+    }
 }
 
 @media screen and (max-width: 568px) {
@@ -1548,8 +2222,49 @@ footer {
         height: 0px;
     }
 
+    .lp-overlay .hero.cta {
+        font-size: 0.95rem;
+        padding: 0.75rem 1.5rem;
+        line-height: 1;
+        flex-wrap: wrap;
+        max-width: 100%;
+    }
+
+    .lp-overlay .cta-get-in-touch {
+        white-space: normal;
+        line-height: 1.5;
+    }
+
     .faq-section .nav-spacer {
         height: 50px;
+    }
+
+    .flip-clock {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        padding: 20px 10px 0px auto;
+    }
+
+    .flip-clock p {
+        font-size: clamp(1.25rem, 1rem + 1vw, 1.5rem);
+    }
+
+    .flip-container {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 20px 10px;
+    }
+
+    .flip-unit {
+        font-size: 1.9rem;
+        width: 65px;
+        height: 65px;
+    }
+
+    .flip-unit span {
+        line-height: 70px;
     }
 
     .tutor-image img {
@@ -1595,6 +2310,21 @@ footer {
     .faq-title {
         margin: 1.5rem 1rem;
     }
+
+    .mt-left,
+    .mt-right,
+    .lp-bundle-right {
+        flex: 1 1 250px;
+        max-width: 600px;
+    }
+
+    .mt-bio {
+        font-size: 1.2rem;
+    }
+
+    .video-wrapper {
+        padding-bottom: 56.25%;
+    }
 }
 
 @media screen and (max-width: 530px) {
@@ -1605,17 +2335,28 @@ footer {
 
 @media screen and (max-width: 480px) {
     .hero-content h2.hero-subtitle {
+        font-size: clamp(1.5rem, 2.5rem + 2vw, 6rem);
         line-height: 4.5rem;
     }
 
-    .hero-text {
-        font-size: 2rem;
+    .hero-content .hero-text {
+        font-size: 1.2rem;
     }
 
-    .tutor-title,
-    .trial-title,
-    .steps-title {
-        font-size: 2.3rem;
+    .hero-cta .cta-get-in-touch {
+        margin: auto;
+        margin-top: 2rem;
+    }
+
+    h2.tutor-title,
+    h2.trial-title,
+    h2.steps-title,
+    h1.intro-title,
+    h2.who-title,
+    h2.benefits-title,
+    h2.pricing-title,
+    h2.kickstart-title {
+        font-size: 2rem;
     }
 
     .tutor-text {
@@ -1624,21 +2365,27 @@ footer {
     }
 
     .tutor-image img {
-        width: 200px;
-        height: 200px;
+        width: 100%;
     }
 
     .tutor-text p,
     .trial-description,
     .trial-next-step,
+    .trial-benefits li,
     .trial-regular-price,
-    .intro-text p {
+    .trial-offer strong,
+    .intro-text p,
+    .text-section p,
+    .text-section li,
+    .benefit-card p,
+    .step-right .step-text,
+    .kickstart-content p,
+    .kickstart-content .trial-benefits li {
         font-size: clamp(1.2rem, 2vw, 2rem);
     }
 
     .trial-image img {
-        width: 200px;
-        height: 200px;
+        width: 80%;
     }
 
     .trial-benefits {
@@ -1649,22 +2396,43 @@ footer {
         font-size: clamp(1.3rem, 2vw, 2rem);
     }
 
-    .intro-text .intro-h1 {
-        font-size: clamp(1.7rem, 5vw, 2rem);
+    .text-section,
+    .image-section {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .image-section img {
+        width: 80%;
+    }
+
+    .kickstart-content,
+    .kickstart-image {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .kickstart-content {
+        margin-bottom: 20px;
+    }
+
+    .kickstart-image img {
+        width: 80%;
+    }
+
+    .contact-intro {
+        margin-bottom: 0.8rem;
     }
 
     .contact-intro .contact-h1 {
-        font-size: clamp(1.7rem, 2vw, 2rem);
+        font-size: clamp(1.5rem, 2vw, 2rem);
         margin-bottom: 0;
     }
 
-    .contact-h1 {
-        font-size: 1.2rem;
-    }
-
+    .contact-form label,
     .contact-form input,
     .contact-form textarea {
-        font-size: 1rem;
+        font-size: 0.9rem;
     }
 
     .modal {
@@ -1674,7 +2442,33 @@ footer {
 
     .cf-form-row .cta-get-in-touch {
         width: 60%;
-        margin-top: 0.5rem;
+        margin-top: 0.1rem;
+    }
+
+    .flip-container {
+        gap: 10px;
+    }
+
+    .flip-unit {
+        font-size: 1.5rem;
+        width: 55px;
+        height: 55px;
+    }
+
+    .flip-unit span {
+        line-height: 60px;
+    }
+
+    .flip-block .unit-label {
+        font-size: 0.8rem;
+    }
+
+    .lp-timeline-entry h3 {
+        font-size: 1.4rem;
+    }
+
+    .lp-timeline-entry p {
+        font-size: 1.3rem;
     }
 }
 
@@ -1737,6 +2531,134 @@ footer {
         font-size: clamp(1.7rem, 2vw, 2rem);
         margin-bottom: 0;
     }
+}
 
+@media screen and (orientation: landscape) and (max-width: 1100px) and (min-width: 768px) {
+    .hero-content h2.hero-subtitle {
+        font-size: clamp(1.5rem, 3rem + 2vw, 6rem);
+        line-height: 4.5rem;
+    }
 
+    .hero-content .hero-text {
+        font-size: 1.8rem;
+    }
+
+    .tutor-image img {
+        width: 300px;
+        height: 300px;
+    }
+
+    .trial-image img {
+        width: 80%;
+    }
+
+    .text-section,
+    .image-section {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .image-section img {
+        width: 40%;
+    }
+
+    .kickstart-image img {
+        width: 80%;
+    }
+
+    .lp-header {
+        padding: 60px 30px;
+    }
+
+    .lp-overlay {
+        padding: 30px;
+        margin-top: 2rem;
+    }
+}
+
+@media screen and (orientation: landscape) and (max-height: 430px) {
+    .nav-spacer {
+        height: 80px;
+    }
+
+    .hero-content h1.hero-title {
+        font-size: 2rem;
+        line-height: 2.5rem;
+    }
+
+    .hero-content h2.hero-subtitle {
+        font-size: 2.5rem;
+        line-height: 3.5rem;
+    }
+
+    .hero-content .hero-text {
+        font-size: 1.5rem;
+        line-height: 1rem;
+    }
+
+    .hero-cta .cta-get-in-touch {
+        margin: auto;
+        margin-top: 1rem;
+    }
+
+    .tutor-image img {
+        width: 40%;
+        height: 40%;
+    }
+
+    .text-section,
+    .image-section {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .image-section img {
+        width: 40%;
+    }
+
+    .kickstart-image img {
+        width: 100%;
+    }
+
+    .lp-header {
+        padding: 30px 20px;
+    }
+
+    .lp-overlay {
+        padding: 20px 15px;
+        margin-top: 3rem;
+    }
+
+    .lp-overlay h1,
+    .lp-overlay h2 {
+        font-size: 2rem;
+        line-height: 2rem;
+    }
+
+    .lp-subheadline,
+    .lp-subheadline-2 {
+        font-size: 1.5rem;
+    }
+
+    .lp-bundle-content {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .lp-bundle-left,
+    .lp-bundle-right {
+        max-width: 100%;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .lp-bundle-left .lp-icon-list {
+        justify-content: center;
+    }
+
+    .lp-bundle-right .video-wrapper {
+        width: 100%;
+        max-width: 100%;
+    }
 }
