@@ -11,7 +11,7 @@
         script-src 'self' 'unsafe-inline' https://kit.fontawesome.com https://cdnjs.cloudflare.com https://cdn.jsdelivr.net;
         font-src 'self' https://fonts.gstatic.com https://ka-f.fontawesome.com;
         img-src 'self' data:;
-        connect-src 'self' https://ka-f.fontawesome.com https://fragrant-union-f59d.betinaperez.workers.dev;
+        connect-src 'self' https://ka-f.fontawesome.com https://fragrant-union-f59d.betinaperez.workers.dev https://email-lead-proxy.betinaperez.workers.dev;
         object-src 'none';
         base-uri 'self';
     ">
@@ -470,9 +470,20 @@
                         <li>Audio files to practice pronunciation</li>
                     </ul>
                     <p><strong>Sign up with your email</strong> and receive your first lesson today!</p>
-                    <button type="button" class="btn openModalBtn">
-                        Send me the Kickstart!
-                    </button>
+
+                    <form id="email-form" name="email-form" class="email-form">
+                        <input type="email" id="email-input" name="email" class="email-input"
+                            placeholder="What's your Email?" required maxlength="100">
+                        <button type="submit" class="cta-button cta-get-in-touch send-email">
+                            <i class="fa-solid fa-envelope fa-beat" style="--fa-beat-scale: 1.2;"></i>
+                            Send me the Kickstart!
+                        </button>
+                        <div id="loadingEmailMessage" class="loadingEmailMessage" role="status" aria-live="assertive"
+                            style="display: none;">
+                            <i class="fa-solid fa-spinner fa-spin"></i> Processing your submission, please wait ...
+                        </div>
+                        <div id="form-message" class="form-message" aria-live="polite"></div>
+                    </form>
                 </div>
             </div>
         </section>
@@ -485,6 +496,7 @@
     <script src="learn-spanish/js/toggle-currency.js"></script>
     <script src="learn-spanish/js/open-cf.js"></script>
     <script src="learn-spanish/js/form-submission.js"></script>
+    <script src="learn-spanish/js/form-email.js"></script>
     <script src="learn-spanish/js/utils.js"></script>
     <div id="contact-modal-placeholder"></div>
 </body>
