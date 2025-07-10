@@ -1771,13 +1771,166 @@ textarea.error {
 }
 
 /* ****************************************
+   Privacy Policy Section
+   **************************************** */
+.privacy-section,
+.tos-section,
+.cancellation-section {
+    background-color: var(--tutor-section-bg);
+    padding-bottom: 1rem;
+}
+
+.policy-section,
+.terms-section,
+.refund-section {
+    margin: 1rem 4rem 3rem;
+}
+
+.policy-banner img,
+.tos-banner img,
+.cancellation-banner img {
+    width: 100%;
+    height: 400px;
+    max-width: 1200px;
+    display: block;
+    margin: 0 auto;
+}
+
+.privacy-section h1,
+.tos-section h1,
+.cancellation-section h1 {
+    margin-top: 2em;
+    font-family: var(--sections-title-font);
+    font-weight: 400;
+    font-style: normal;
+    font-size: clamp(2.5rem, 3.5vw, 3rem);
+    text-align: center;
+    color: var(--steps-number);
+}
+
+.effective-date {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.clarifications {
+    margin-top: 1.5rem;
+    font-size: 1.3rem;
+    color: var(--steps-number);
+}
+
+.privacy-section h2,
+.tos-section h2,
+.cancellation-section h2 {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    font-size: clamp(1.5rem, 2.5vw, 2rem);
+    color: var(--text-gray);
+}
+
+.privacy-section p,
+.tos-section p,
+.cancellation-section p {
+    margin-bottom: 0.5em;
+    text-align: left;
+    font-size: 1.2rem;
+}
+
+.privacy-section ul,
+li,
+.tos-section ul,
+li,
+.cancellation-section ul,
+li {
+    padding-left: 1.5em;
+    font-size: 1.2rem;
+    margin-left: 1rem;
+    padding-left: 15px;
+    position: relative;
+}
+
+.policy-banner img,
+.tos-banner img,
+.cancellation-banner img {
+    border-radius: 2%;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.break-email {
+    word-break: break-all;
+    overflow-wrap: anywhere;
+}
+
+
+/* ****************************************
    Footer Section
    **************************************** */
-footer {
-    text-align: center;
-    padding: 1.1rem;
-    background-color: var(--benefits-bg);
+.legal-footer {
+    background-color: var(--nav-bg);
+    border-top: 1px solid #ddd;
+    padding: 20px 15px;
     color: var(--text-black);
+}
+
+.footer-container {
+    max-width: 960px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.footer-title {
+    font-family: var(--hero-subtitle-font);
+    font-size: 1.7rem;
+    margin: auto auto 1rem;
+}
+
+.footer-social a {
+    margin-right: 15px;
+    display: inline-block;
+    transition: opacity 0.3s ease;
+}
+
+.footer-social a:last-child {
+    margin-right: 0;
+}
+
+.footer-social img {
+    width: 2.2rem;
+    height: 2.2rem;
+}
+
+.footer-social a:hover,
+.footer-legal a:hover {
+    opacity: 0.75;
+}
+
+.footer-legal ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.footer-legal a {
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.footer-copyright {
+    text-align: center;
+    padding: 1rem;
+    color: var(--text-black);
+    margin-top: 1rem;
+    font-size: 1rem;
 }
 
 /* ****************************************
@@ -1935,6 +2088,17 @@ footer {
     .lp-subheadline,
     .lp-subheadline-2 {
         font-size: clamp(1rem, 1.5vw + 1rem, 1.5rem);
+    }
+
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-legal ul {
+        justify-content: center;
+        padding-top: 10px;
     }
 }
 
