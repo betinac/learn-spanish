@@ -54,6 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
     scrollSpyNavHighlight();
   });
   loadContactModal();
+  loadFooter();
 });
 
 function scrollSpyNavHighlight() {
@@ -102,4 +103,11 @@ function animateOnScroll() {
 
 }
 document.addEventListener('DOMContentLoaded', animateOnScroll);
-  
+
+function loadFooter() {
+  fetch('/learn-spanish/pages/footer.html')
+    .then(res => res.text())
+    .then(html => {
+      document.getElementById('footer-placeholder').innerHTML = html;
+    });
+}
