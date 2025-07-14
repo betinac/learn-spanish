@@ -839,6 +839,19 @@ h1.intro-title::after {
     margin-bottom: 20px;
 }
 
+.pricing-list {
+    list-style-position: inside;
+    padding: 0;
+    text-align: left;
+    display: inline-block;
+}
+
+.pricing-list li{
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+    width: auto;
+}
+
 .package-price {
     font-size: 1.2rem;
     font-weight: bold;
